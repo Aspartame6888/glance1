@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/img_pollen" android:layout_width="wrap_content" android:layout_height="@dimen/dp_16" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/white" />
+    <com.zapp.oneweatherzapp.presentation.views.MarqueeTextView android:textSize="@dimen/sp_11" android:textColor="@color/white" android:id="@id/txt_pollen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" android:lines="1" android:lineSpacingExtra="0.0sp" android:fontFamily="sans-serif" android:layout_alignParentStart="true" android:letterSpacing="0.02" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/img_pollen" />
+    <com.zapp.oneweatherzapp.presentation.views.MarqueeTextView android:textSize="@dimen/sp_13" android:textColor="@color/white" android:id="@id/txt_pollen_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:lines="1" android:lineSpacingExtra="2.0sp" android:letterSpacing="0.02" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/txt_pollen" />
+</androidx.constraintlayout.widget.ConstraintLayout>

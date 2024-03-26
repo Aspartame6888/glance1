@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.common";
+
+package com.glance.spaces.zapp.content.publishing.schemas.common;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/icon.proto";
+
+message ElementCta {
+  string cta_text = 1;
+  string cta_url = 2;
+  Icon cta_icon = 3;
+}

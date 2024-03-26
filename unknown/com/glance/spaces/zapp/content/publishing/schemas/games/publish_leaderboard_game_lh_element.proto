@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.games";
+
+package com.glance.spaces.zapp.content.publishing.schemas.games;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/gaming/user_rank_info.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/icon.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/poster.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/tag.proto";
+
+
+message PublishLeaderboardGameLhElement {
+  message TextInfo {
+    string a_few_seconds_ago = 1;
+    string coins = 2;
+    string hrs = 3;
+    string mm = 4;
+    string ss = 5;
+    string register = 6;
+    string play_now = 7;
+    string view_leaderboard = 8;
+    string ended = 9;
+    string you = 10;
+    string ending_in = 11;
+    string ending_at = 12;
+    string ago = 13;
+    string starts_in = 14;
+    string days = 15;
+  }
+  string game_id = 1;
+  string game_name = 2;
+  common.Icon game_icon = 3;
+  common.Poster game_banner = 4;
+  common.ElementCta game_cta_url = 5;
+  string status = 6;
+  int64 tournament_start_time = 7;
+  int64 tournament_end_time = 8;
+  string category = 9;
+  string tournament_id = 10;
+  string tournament_name = 11;
+  string user_name = 12;
+  string user_score = 13;
+  int64 user_rank = 14;
+  repeated common.gaming.UserRankInfo score_board = 15;
+  string user_avatar = 16;
+  string user_city = 17;
+  string view_more_cta = 18;
+  int64 user_coins = 19;
+  common.ElementCta view_more = 20;
+  common.Icon prize_icon = 21;
+  string user_ordinal_rank = 22;
+  TextInfo text_info = 23;
+  common.Tag user_rank_info = 24;
+
+}
+

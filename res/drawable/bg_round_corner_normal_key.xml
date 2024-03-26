@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/key_round_corner" />
+            <solid android:width="1.0dip" android:color="@color/bg_normal_key" />
+            <stroke android:width="@dimen/key_stroke_width" android:color="@color/bg_keyboard" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/zappwidget/news/tagged_article.proto";
+import "com/glance/analytics/spaces/client/api/zappwidget/news/top_stories.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+/* In case some zapps want to add extra content */
+message ZappExt {
+  oneof ext {
+    TopNewsExt news = 1 [deprecated = true];
+    com.glance.analytics.spaces.client.api.zappwidget.news.TopStories top_stories = 2;
+    com.glance.analytics.spaces.client.api.zappwidget.news.TaggedArticle tagged_article = 3;
+  }
+}
+
+message TopNewsExt {
+  option deprecated = true;
+}

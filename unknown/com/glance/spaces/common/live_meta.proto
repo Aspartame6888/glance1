@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common";
+
+package com.glance.spaces.common;
+
+import "google/protobuf/timestamp.proto";
+
+enum LiveStatus {
+    LIVE_STATUS_UNKNOWN = 0;
+    LIVE = 1;
+    UPCOMING = 2;
+    ENDED = 3;
+}
+
+message LiveMeta {
+    google.protobuf.Timestamp start_timestamp = 1;
+    google.protobuf.Timestamp end_timestamp = 2;
+    LiveStatus status = 3;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="28.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_v5_mostly_cloudy_overcast_night__0" android:pathData="M27.339,9.869a3.967,3.967 0,1 1,-7.335 -2.909A3.998,3.998 0,0 1,22.47 5a4.06,4.06 0,0 0,-0.14 1.073,3.998 3.998,0 0,0 5.009,3.796z" />
+    <path android:fillColor="@drawable/$ic_v5_mostly_cloudy_overcast_night__1" android:pathData="M27.339,9.869a3.967,3.967 0,0 1,-7.443 -1.455c-0.051,-0.487 -0.014,-0.98 0.108,-1.454A3.998,3.998 0,0 1,22.47 5a4.06,4.06 0,0 0,-0.14 1.073,3.998 3.998,0 0,0 5.009,3.796z" />
+    <path android:fillColor="@drawable/$ic_v5_mostly_cloudy_overcast_night__2" android:pathData="M21.941,11.316a8.478,8.478 0,0 0,-4.667 -4.667,8.221 8.221,0 0,0 -3.36,-0.622 8.501,8.501 0,0 0,-7.692 5.28,8.237 8.237,0 0,0 -0.583,2.435H5.25a4.184,4.184 0,0 0,-1.291 0.195,1.859 1.859,0 0,0 -0.335,0.109 4.472,4.472 0,0 0,1.626 8.656H22.027a5.694,5.694 0,0 0,-0.086 -11.363v-0.023z" />
+    <path android:fillColor="@drawable/$ic_v5_mostly_cloudy_overcast_night__3" android:pathData="M27.362,17.001a5.693,5.693 0,0 1,-5.335 5.686,2.932 2.932,0 0,1 -0.374,0H10.26c0.29,0.002 0.579,-0.025 0.863,-0.078a5.686,5.686 0,0 0,4.838 -5.623,5.693 5.693,0 0,1 5.444,-5.686h0.374a5.686,5.686 0,0 1,5.584 5.701z" />
+</vector>

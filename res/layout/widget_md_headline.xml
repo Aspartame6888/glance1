@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="data_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/poster" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <ImageView android:tag="gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+    <ImageView android:id="@id/logo" android:tag="showinAOD" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_margin="@dimen/control_extra_space" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textColor="@color/white" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_extra_space" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_marginHorizontal="@dimen/control_extra_space" style="@style/TitleXSmall" />
+    <ImageView android:id="@id/tag" android:tag="showinAOD" android:background="@drawable/circle_white_16" android:padding="@dimen/control_mini_space" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_margin="@dimen/control_extra_space" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

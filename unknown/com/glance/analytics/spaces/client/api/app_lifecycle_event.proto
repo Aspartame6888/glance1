@@ -1,0 +1,32 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/element_location.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message AppLifecycleEvent {
+  oneof event {
+    L0ScreenOn l0_screen_on = 1;
+    ExitLockscreen exit_lockscreen = 2;
+  }
+  ElementLocation element_location = 3;
+  IntentAction intent_action = 4;
+
+  message L0ScreenOn {
+  }
+
+  message ExitLockscreen {
+  }
+}
+
+enum IntentAction {
+  UNKOWN_INTENT_ACTION = 0;
+  HOME_BUTTON = 1;
+  SCREEN_OFF = 2;
+  BACK_BUTTON = 3;
+  APP_SWITCHER = 4;
+  NOTIFICATION = 5;
+  UNLOCK = 6;
+}

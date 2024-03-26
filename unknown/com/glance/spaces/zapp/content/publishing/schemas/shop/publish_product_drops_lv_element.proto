@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.shop";
+
+package com.glance.spaces.zapp.content.publishing.schemas.shop;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/label.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/logo.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/title.proto";
+
+message PublishProductDropsLvElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Logo logo = 3;
+  common.Label label = 4;
+  string destination_url = 5;
+  string product_image_url = 6;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.client.v1";
+
+package com.glance.spaces.zapp.content.v1;
+
+import "com/glance/spaces/common/common_client_params.proto";
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/snp/ack.proto";
+import "com/glance/spaces/snp/service/v1/onboarding_config.proto";
+import "validate/validate.proto";
+
+message OnboardingStateChangeRequest {
+  common.CommonClientParams common_client_params = 1 [(validate.rules).message.required = true];
+  OnboardingCallback callback = 2 [(validate.rules).message.required = true];
+}
+
+message OnboardingStateChangeResponse {
+  common.CommonServerParams common_server_params = 1;
+  snp.Ack ack = 2 [(validate.rules).message.required = true];
+}

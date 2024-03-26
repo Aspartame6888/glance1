@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.zapp.client";
+
+package com.glance.spaces.analytics.zapp.client;
+
+import "com/glance/spaces/analytics/common/analytics_event_params.proto";
+
+message ClickEvent {
+  string content_id = 1;
+  string content_impression_id = 2;
+  uint64 start_time = 3;
+  uint64 end_time = 4;
+  string startSource = 5;
+  string endSource = 6;
+  common.AnalyticsEventParams analytics_event_params = 7;
+  string glance_session_id = 8;
+  string space_session_id = 9;
+  string app_session_id = 10;
+}

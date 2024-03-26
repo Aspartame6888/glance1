@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/snp/service/v1/widget_deeplink_config.proto";
+import "com/glance/spaces/snp/service/v1/onboarding_config.proto";
+
+message WidgetConfig {
+  repeated Group groups = 1;
+
+  WidgetDeeplinkConfig widget_deeplink_config = 2;
+  message Group {
+    string id = 1;
+    string name = 2;
+    string icon = 3;
+  }
+
+  OnboardingConfig onboarding_config = 3;
+}

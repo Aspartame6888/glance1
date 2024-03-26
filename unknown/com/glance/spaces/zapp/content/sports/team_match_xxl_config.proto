@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/deeplink.proto";
+
+message TeamMatchXxlConfig {
+  common.Deeplink view_schedule = 1;
+  common.Deeplink add_team = 2;
+  common.Deeplink no_upcoming_games = 3;
+}

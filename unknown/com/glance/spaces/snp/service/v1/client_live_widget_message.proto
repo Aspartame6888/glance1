@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.client.v1";
+
+package com.glance.spaces.zapp.content.client.v1;
+
+import "com/glance/spaces/common/common_client_params.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+
+message ClientLiveWidgetMessage {
+  common.CommonClientParams common_params = 1;
+  snp.SnpParams snp_params = 2;
+  repeated ClientLiveWidgetNotification notifications = 3;
+}
+
+message ClientLiveWidgetNotification {
+  oneof body {
+    LiveWidgetSubscription subscription = 1;
+    LiveWidgetUnSubscription un_subscription = 2;
+    FetchLiveWidgetSnapshot fetch_snapshot = 3;
+  }
+}
+
+message LiveWidgetSubscription {
+  reserved 1 to 5;
+  reserved "live_element_id", "snapshot_url", "live_start_time", "live_end_time", "source";
+  string content_id = 6;
+}
+
+message LiveWidgetUnSubscription {
+  reserved 1;
+  reserved "live_element_id";
+  reserved 2;
+  reserved "source";
+  string content_id = 3;
+}
+
+message FetchLiveWidgetSnapshot {
+  reserved 1;
+  reserved "live_element_id";
+  reserved 2;
+  reserved "snapshot_url";
+  string content_id = 3;
+}

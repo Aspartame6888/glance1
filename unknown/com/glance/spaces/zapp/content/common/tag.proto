@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+import "com/glance/spaces/zapp/content/common/background.proto";
+
+message Tag {
+  string value = 1;
+  string image_left = 2;
+  LinearGradient linear_gradient = 3;
+  bool showShimmer = 4;
+  Background background = 5;
+  // SDK is supposed to sort the list based on valid_upto timestamp
+  // and pick the first tag that is active
+  int64 valid_upto = 6;
+}
+message LinearGradient {
+  string start_color = 1;
+  string end_color = 2;
+}

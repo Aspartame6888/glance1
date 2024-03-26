@@ -1,0 +1,16 @@
+syntax ="proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.horoscope";
+
+package com.glance.spaces.zapp.content.horoscope;
+
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+
+message HoroscopeLhElement{
+    int32 id = 1;
+    zapp.content.common.Title title = 2;
+    zapp.content.common.Poster poster = 3;
+    string description = 4;
+}

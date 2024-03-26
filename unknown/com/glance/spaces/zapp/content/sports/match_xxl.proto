@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/sports/match_meta.proto";
+import "com/glance/spaces/zapp/content/sports/score_column.proto";
+
+message MatchXxl {
+  MatchMeta match_meta = 1;
+  InningDivision inning_division = 2;
+  repeated ScoreColumn score_columns = 3;
+  common.Image background = 4;
+  common.Image no_game_detail = 5;
+}
+
+enum InningDivision {
+  INNING_DIVISION_UNSPECIFIED = 0;
+  INNING_DIVISION_TOP = 1;
+  INNING_DIVISION_BOTTOM = 2;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.shop";
+
+package com.glance.spaces.zapp.content.shop;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+/**
+ * Used for Ls Shop Trending Today Ln & Md
+ */
+message TrendingTodayLs {
+  common.Tag tag = 1;
+  string trend = 2;
+  string text = 3;
+  common.Image image = 4;
+  common.Image bg_image = 5;
+}

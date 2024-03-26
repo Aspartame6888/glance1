@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/gif.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/sports/match_meta.proto";
+
+message MatchLnElement {
+  MatchMeta match_meta = 1;
+  common.Image bg_image = 2;
+  common.Gif winner_text_gif = 3;
+}

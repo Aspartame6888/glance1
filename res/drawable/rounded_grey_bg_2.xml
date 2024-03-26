@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#29111111" />
+    <corners android:radius="@dimen/control_micro_space" />
+    <padding android:left="@dimen/control_mini_space" android:top="@dimen/control_micro_space" android:right="@dimen/control_mini_space" android:bottom="@dimen/control_micro_space" />
+</shape>

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "com/glance/analytics/spaces/client/internal/enriched_action_event.proto";
+import "com/glance/analytics/spaces/client/appscope/client_context.proto";
+import "com/glance/analytics/spaces/client/api/session.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.internal";
+
+package com.glance.analytics.spaces.client.internal;
+
+message AnalyticsEventBatch {
+  string batch_nonce = 1;
+  com.glance.analytics.spaces.client.appscope.ClientContext context = 2;
+  repeated AnalyticEvent events = 3;
+  AppSession app_session_id = 4; // forces new batch creation when session changes
+}
+
+message AppSession {
+  com.glance.analytics.spaces.client.api.SurfaceSessionType session_type = 1;
+  string session_id = 2;
+}
+
+message BatchUploadResponse {
+  string batch_nonce = 1;
+  bool success = 2;
+  int32 status_code = 3;
+  string status_message = 4;
+}
+
+message AnalyticEvent {
+  oneof event {
+    EnrichedActionEvent action_event = 1;
+    EnrichedContentEventBatch content_event_batch = 3;
+  }
+}

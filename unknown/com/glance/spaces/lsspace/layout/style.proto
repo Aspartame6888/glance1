@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.layout";
+
+package com.glance.spaces.lsspace.layout;
+
+message Style {
+  string bg_color = 1;
+  string bg_img = 2;
+}

@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.content.server.v1";
+
+package com.glance.spaces.content.server.v1;
+
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/common/widget_type.proto";
+import "com/glance/spaces/common/space_type.proto";
+import "com/glance/spaces/common/widget_size.proto";
+import "com/glance/spaces/ds/edgeml/v1/l0_content_candidate.proto";
+import "com/glance/spaces/lsspace/layout/spaces_hierarchy.proto";
+import "com/glance/spaces/lsspace/layout/style.proto";
+import "com/glance/spaces/lsspace/layout/zapp_meta.proto";
+import "com/glance/spaces/snp/service/v1/widget_data.proto";
+import "com/glance/spaces/snp/service/v1/widget_element.proto";
+import "com/glance/spaces/snp/service/v1/widget_config.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+import "com/glance/spaces/ds/edgeml/v1/ml_features.proto";
+import "validate/validate.proto";
+
+message ServerL0Message {
+  common.CommonServerParams common_params = 1;
+  snp.SnpParams snp_params = 2;
+  repeated ServerL0ContentNotification notifications = 3
+      [ (validate.rules).repeated = {min_items : 1} ];
+}
+
+message ServerL0ContentNotification {
+  oneof body { ContentFullRefresh content_full_refresh = 2; }
+}
+
+message ContentFullRefresh {
+  L0Message l0_message = 1 [ (validate.rules).message.required = true ];
+  int64 user_l_0_data_version = 2;
+}
+
+// For L0, tying the view and the data together
+message L0Bundle {
+  lsspace.layout.SpaceHierarchy space_hierarchy = 1;
+  repeated zapp.content.WidgetData widgets_data = 2;
+}
+
+message L0Message {
+  string id = 1;
+  L0CandidatesData l0_candidates_data = 2;
+  repeated L0Bundle l0_bundles = 3 [deprecated = true];
+  L0TraceMeta trace_meta = 4;
+  repeated L0Tray l0_trays = 5;
+  string job_id = 6;
+}
+
+message L0CandidatesData {
+  repeated L0ContentCandidate l0_content_candidates = 1 [ deprecated = true ];
+  repeated L0WidgetData l0_widgets_data = 2;
+}
+
+message L0TrayMeta {
+  com.glance.spaces.common.SpaceType space_id = 1;
+  string title = 2;
+}
+
+message L0Tray {
+  string id = 1;
+  double weight = 2;
+  L0TrayMeta meta = 3;
+  repeated L0WidgetData l0_widgets_data = 4;
+  lsspace.layout.Style style = 5;
+  int64 start_time = 6;
+  int64 end_time = 7;
+  string serving_id = 8;
+}
+
+message L0TraceMeta {
+  int64 reco_run_epoch_seconds = 1;
+  string algo_display_name = 2;
+}
+
+message L0WidgetData {
+  int32 zapp_widget_identifier = 1;
+  int32 zapp_id = 2; // Enum value of common.ZappId
+  double weight = 3;
+  common.WidgetType widget_type = 4
+      [ (validate.rules).enum = {not_in : [ 0 ]} ];
+  zapp.content.WidgetElement widget_element = 5;
+  L0WidgetMeta l0_widget_meta = 6;
+}
+
+message L0WidgetMeta {
+  com.glance.spaces.common.WidgetSize widget_size = 8;
+  repeated Feature features = 9;
+}

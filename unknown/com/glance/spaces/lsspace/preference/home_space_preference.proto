@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+
+import"com/glance/spaces/lsspace/preference/pref_option_list.proto";
+
+message HomeSpacePreference {
+
+  int32 version = 1;
+  string id = 2;
+  reserved 3;
+  reserved "horoscope_data";
+  PrefOptionList zodiac_sign_preferences = 4;
+}

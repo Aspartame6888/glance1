@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.common";
+
+package com.glance.spaces.analytics.common;
+
+enum Region {
+  REGION_UNSPECIFIED = 0;
+  IN = 1;
+  US = 2;
+}

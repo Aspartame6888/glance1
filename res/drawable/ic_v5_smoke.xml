@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="28.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_v5_smoke__0" android:pathData="M24.57,22.359h-21a0.498,0.498 0,0 1,0 -0.996h21a0.498,0.498 0,1 1,0 0.996z" />
+    <path android:fillColor="@drawable/$ic_v5_smoke__1" android:pathData="M17.57,24.303h-14a0.498,0.498 0,1 1,0 -0.995h14a0.498,0.498 0,1 1,0 0.995z" />
+    <path android:fillColor="@drawable/$ic_v5_smoke__2" android:pathData="M21.949,8.297a8.478,8.478 0,0 0,-4.667 -4.667A8.143,8.143 0,0 0,13.914 3a8.493,8.493 0,0 0,-7.692 5.289,8.182 8.182,0 0,0 -0.583,2.434H5.25a4.184,4.184 0,0 0,-1.291 0.195,1.859 1.859,0 0,0 -0.335,0.109 4.472,4.472 0,0 0,1.626 8.656h16.784A5.694,5.694 0,0 0,21.95 8.32v-0.023z" />
+    <path android:fillColor="@drawable/$ic_v5_smoke__3" android:pathData="M27.362,13.974a5.701,5.701 0,0 1,-5.335 5.694,2.878 2.878,0 0,1 -0.366,0H10.26c0.292,0.002 0.584,-0.024 0.871,-0.078a5.686,5.686 0,0 0,4.838 -5.631,5.693 5.693,0 0,1 5.444,-5.686h0.366a5.686,5.686 0,0 1,5.584 5.701z" />
+</vector>

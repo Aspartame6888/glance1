@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+message Views {
+  string image_left = 1; // e.g. people image or eye image url
+  string count = 2; // e.g. '1.2k'
+  string prefix_text = 3; // e.g. 'total'
+  string suffix_text = 4; // e.g. 'on this article/post/topic'
+}

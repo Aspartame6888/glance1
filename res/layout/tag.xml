@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tag" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tagBg" android:tag="localImageAOD" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/tagContent" android:layout_alignBottom="@id/tagContent" android:contentDescription="@string/tag_background" android:layout_alignStart="@id/tagContent" android:layout_alignEnd="@id/tagContent" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/tagContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/control_mini_extra_space" android:paddingVertical="@dimen/control_mini_space">
+        <ImageView android:id="@id/tagLogo" android:tag="showinAOD" android:visibility="gone" android:layout_width="@dimen/control_space" android:layout_height="@dimen/control_space" android:layout_marginRight="@dimen/control_mini_space" android:adjustViewBounds="true" android:layout_centerVertical="true" android:contentDescription="@string/tag_logo" android:layout_alignParentStart="true" />
+        <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_100" android:id="@id/tagTitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_toRightOf="@id/tagLogo" android:layout_centerVertical="true" style="@style/TitleXSmall" />
+        <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_100" android:id="@id/tagTitleShimmer" android:tag="shimmerDestination" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_toRightOf="@id/tagLogo" android:layout_centerVertical="true" style="@style/TitleXSmall" />
+    </RelativeLayout>
+</RelativeLayout>

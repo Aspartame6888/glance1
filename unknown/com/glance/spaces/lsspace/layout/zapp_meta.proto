@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.layout";
+
+package com.glance.spaces.lsspace.layout;
+
+import "com/glance/spaces/common/widget_type.proto";
+import "validate/validate.proto";
+
+message ZappMeta {
+  enum ServerIntegrationType {
+    INTEGRATION_TYPE_UNSPECIFIED = 0;
+    SERVER = 1;
+    LOCAL = 2;
+  }
+  ServerIntegrationType server_integration_type = 1;      // L0 will use Server as default value for this
+  string zapp_widget_id = 2 [(validate.rules).string.min_len = 1, deprecated = true];
+  common.WidgetType widget_type = 3 [(validate.rules).enum = {not_in: [0]}];
+  int32 zapp_id = 4; // Enum value of common.ZappId
+  int32 zapp_widget_identifier = 5;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.common";
+
+package com.glance.spaces.zapp.content.publishing.schemas.common;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/title.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+
+message PublishHeadlinesElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Image logo = 3;
+  common.Image poster = 4;
+}
+

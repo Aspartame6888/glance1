@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common";
+
+package com.glance.spaces.common;
+
+import "com/glance/spaces/common/region.proto";
+
+message ClientParams {
+  string partner_id = 1;
+  string tlib_version = 2;
+  string user_id = 3;
+  string sdk_version = 4;
+  common.Region region = 5;
+  string device_id = 6;
+  string api_key = 7;
+  string locale = 8;
+}

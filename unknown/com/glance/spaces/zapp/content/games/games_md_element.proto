@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+message GamesMdElement {
+  common.Image game_banner = 1;
+  common.Title title = 2;
+  common.Tag tag = 3;
+  string game_name = 4;
+  common.Title subtitle = 5;
+  common.Image gaming_logo = 6;
+}

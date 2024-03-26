@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.preferences";
+
+package com.glance.spaces.zapp.content.preferences;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/common/media_content.proto";
+
+message SetPreferenceElement {
+  common.Title title = 1;
+  common.MediaContent bg_image = 2;
+  common.MediaContent preference_icon = 3;
+  common.ElementCta element_cta = 4;
+}

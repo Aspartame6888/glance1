@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.space.client";
+
+package com.glance.spaces.analytics.space.client;
+
+import "com/glance/spaces/analytics/common/analytics_event_params.proto";
+
+message StackEvent {
+  string stack_id = 1;
+  string space_impression_id = 2;
+  string stack_impression_id = 3;
+  string start_source = 4;
+  string end_source = 5;
+  string space_position = 6;
+  string stack_position = 7;
+  uint64 start_time = 8;
+  uint64 end_time = 9;
+  common.AnalyticsEventParams analytics_event_params = 10;
+  string glance_session_id = 11;
+  string space_session_id = 12;
+  string app_session_id = 13;
+}

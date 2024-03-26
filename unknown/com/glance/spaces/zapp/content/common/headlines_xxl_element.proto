@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/logo.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+message HeadlinesXxlElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Logo logo = 3;
+  common.Poster poster = 4;
+  common.Tag tag = 5;
+  common.Image banner = 6;
+}
+

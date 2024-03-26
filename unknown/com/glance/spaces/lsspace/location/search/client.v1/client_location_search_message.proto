@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.location.search.client.v1";
+
+package com.glance.spaces.lsspace.location.search.client.v1;
+import "com/glance/spaces/common/common_client_params.proto";
+import "validate/validate.proto";
+
+
+message ClientLocationSearchMessage {
+  common.CommonClientParams common_params = 1;
+  string query_str = 2 [(validate.rules).string.min_len = 1];
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/onboarding_widget" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginHorizontal="12.0dip" android:layout_marginVertical="12.0dip" android:clipToOutline="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/bgImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/aod_widget_bg" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/control_triple_space" android:paddingTop="@dimen/control_extra_space" android:paddingRight="@dimen/control_space" android:paddingBottom="@dimen/control_extra_space" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.65">
+            <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/onboarding_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lock_screen_got_new_update" android:maxLines="2" android:layout_alignParentTop="true" app:autoSizeMaxTextSize="@dimen/sp_12" style="@style/TitleXSmall" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:textColor="@color/white" android:layout_gravity="start|center" android:id="@id/onboarding_later" android:background="@drawable/widgetbutton_outlined_rounded_corner_100" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/later" android:paddingHorizontal="@dimen/control_double_space" android:paddingVertical="@dimen/control_mini_extra_space" app:autoSizeMaxTextSize="@dimen/sp_12" style="@style/TitleXSmall" />
+                <TextView android:textColor="@color/white" android:layout_gravity="end|center" android:id="@id/onboarding_button" android:background="@drawable/widgetbutton_rounded_corner_100_aod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_now" android:paddingHorizontal="@dimen/control_double_space" android:paddingVertical="@dimen/control_mini_extra_space" app:autoSizeMaxTextSize="@dimen/sp_12" style="@style/TitleXSmall" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/one" android:layout_width="0.0dip" android:layout_height="@dimen/control_dodeca_space" android:src="@drawable/onboarding_aod_icon" android:scaleType="fitEnd" android:layout_weight="0.35" android:paddingEnd="@dimen/control_medium_space" android:paddingVertical="@dimen/control_mini_space" />
+    </LinearLayout>
+</RelativeLayout>

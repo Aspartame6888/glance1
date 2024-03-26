@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="days">
+        <item quantity="other">hace %s días</item>
+        <item quantity="one">Hace %s día</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Avanzar %d segundos</item>
+        <item quantity="one">Avanzar %d segundo</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Retroceder %d segundos</item>
+        <item quantity="one">Retroceder %d segundo</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">hace %s horas</item>
+        <item quantity="one">hace %s hora</item>
+    </plurals>
+    <plurals name="min_publishers_required">
+        <item quantity="other">Se requiere un mínimo de %s medios</item>
+        <item quantity="one">Se requiere un mínimo de %s medio</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">hace %s minutos</item>
+        <item quantity="one">hace %s minuto</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notificaciones nuevas</item>
+        <item quantity="one">%d notificación nueva</item>
+    </plurals>
+</resources>

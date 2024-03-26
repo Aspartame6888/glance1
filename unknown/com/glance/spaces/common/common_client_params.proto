@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common";
+
+package com.glance.spaces.common;
+
+import "com/glance/spaces/common/region.proto";
+import "validate/validate.proto";
+
+message CommonClientParams {
+  string partner_id = 1;
+  string tlib_version = 2;
+  string user_id = 3 [(validate.rules).string.min_len = 1]; // TODO: can add regex here.
+  string sdk_version = 6;
+  common.Region region = 7;
+  string device_id = 8;
+  string api_key = 9;
+}

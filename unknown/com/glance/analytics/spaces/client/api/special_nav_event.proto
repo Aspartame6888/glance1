@@ -1,0 +1,34 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/nav_targets.proto";
+import "com/glance/analytics/spaces/client/api/interaction.proto";
+import "com/glance/analytics/spaces/client/api/element_location.proto";
+import "com/glance/analytics/spaces/client/api/splnav/preferences.proto";
+import "com/glance/analytics/spaces/client/api/splnav/settings.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+
+// Navigation events consist of a UI element that was interacted with (button,
+// link, etc.), the interaction (action) that occurred on the element, and the
+// source and destination locations of the navigation.
+message SpecialNavigationEvent {
+  InteractiveElement element = 1; // UI element that triggered nav (button, link, etc.)
+  com.glance.analytics.spaces.client.api.Interaction interaction = 2; // interaction (click, swipe, etc.)
+  com.glance.analytics.spaces.client.api.ElementLocation source = 3; // nav started from ...
+  com.glance.analytics.spaces.client.api.ElementLocation destination = 4; // nav ended at ...
+}
+
+// Interactive elements are the UI elements that are interacted with (button, link, etc.).
+message InteractiveElement {
+  oneof element {
+    ElementNotApplicable not_applicable = 1;
+    com.glance.analytics.spaces.client.api.splnav.PreferencesElement preferences = 3;
+    com.glance.analytics.spaces.client.api.splnav.SettingsElement settings = 4;
+  }
+}
+
+message ElementNotApplicable {
+}

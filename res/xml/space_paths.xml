@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <root-path name="space_data" path="/" />
+    <files-path name="files/space_data" path="/" />
+    <files-path name="glance_images" path="glance_app_data/" />
+    <root-path name="glance_data" path="/" />
+    <files-path name="files/glance_data" path="/" />
+</paths>

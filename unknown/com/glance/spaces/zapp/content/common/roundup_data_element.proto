@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+import "com/glance/spaces/zapp/content/common/roundup_card_element.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+message RoundupDataElement {
+  string roundup_name = 1;
+  repeated RoundupCardElement roundup_card_element = 2;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+enum Background {
+  BACKGROUND_UNSPECIFIED = 0;
+  RED = 1;
+  ORANGE = 2;
+  BLUE = 3;
+  VIOLET = 4;
+}

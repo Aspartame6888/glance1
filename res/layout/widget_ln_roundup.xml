@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/background" android:tag="data_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/poster" android:tag="showinAOD" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <ImageView android:tag="gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+    <ImageView android:id="@id/logo" android:tag="showinAOD" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_margin="@dimen/control_medium_space" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_marginEnd="@dimen/control_quad_space" />
+    <include android:id="@id/tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/control_medium_space" android:layout_marginTop="@dimen/control_medium_space" android:layout_marginRight="@dimen/control_extra_space" android:layout_marginBottom="@dimen/control_mini_space" android:layout_above="@id/title" layout="@layout/tag_roundup" />
+    <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/title" android:paddingBottom="@dimen/control_medium_space" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:layout_alignParentBottom="true" android:layout_marginHorizontal="@dimen/control_medium_space" style="@style/TitleSmall" />
+    <ImageView android:background="@drawable/ic_card_stack" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_margin="@dimen/control_medium_space" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

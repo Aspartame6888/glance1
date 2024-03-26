@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:theme="@style/Theme.AppCompat.Light" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/toolbar" layout="@layout/toolbar_custom" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.glance.space.commons.ui.views.SpaceWebView android:id="@id/webView" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="48.0dip" />
+    <include layout="@layout/layout_zapp_error" />
+</FrameLayout>

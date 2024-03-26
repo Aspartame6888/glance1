@@ -1,0 +1,172 @@
+package com.zapp.oneweatherzapp;
+
+import android.content.Context;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+/* compiled from: com.google.android.gms:play-services-measurement-impl@@21.1.1 */
+/* loaded from: classes3.dex */
+public final class d26 {
+    public static final b26 A;
+    public static final b26 B;
+    public static final b26 C;
+    public static final b26 D;
+    public static final b26 E;
+    public static final b26 F;
+    public static final b26 G;
+    public static final b26 H;
+    public static final b26 I;
+    public static final b26 J;
+    public static final b26 K;
+    public static final b26 L;
+    public static final b26 M;
+    public static final b26 N;
+    public static final b26 O;
+    public static final b26 P;
+    public static final b26 Q;
+    public static final b26 R;
+    public static final b26 S;
+    public static final b26 T;
+    public static final b26 U;
+    public static final b26 V;
+    public static final b26 W;
+    public static final b26 X;
+    public static final b26 Y;
+    public static final b26 Z;
+    public static final b26 a0;
+    public static final b26 b0;
+    public static final b26 c0;
+    public static final b26 d0;
+    public static final b26 e0;
+    public static final b26 f0;
+    public static final b26 g0;
+    public static final b26 h0;
+    public static final b26 i0;
+    public static final b26 j0;
+    public static final b26 k0;
+    public static final b26 l0;
+    public static final b26 m0;
+    public static final b26 n0;
+    public static final b26 o0;
+    public static final b26 p0;
+    public static final b26 q0;
+    public static final b26 r0;
+    public static final b26 s0;
+    public static final b26 t;
+    public static final b26 t0;
+    public static final b26 u;
+    public static final b26 u0;
+    public static final b26 v;
+    public static final b26 v0;
+    public static final b26 w;
+    public static final b26 w0;
+    public static final b26 x;
+    public static final b26 x0;
+    public static final b26 y;
+    public static final b26 z;
+    public static final List a = Collections.synchronizedList(new ArrayList());
+    public static final Set b = Collections.synchronizedSet(new HashSet());
+    public static final b26 c = a("measurement.ad_id_cache_time", 10000L, 10000L, zy.c);
+    public static final b26 d = a("measurement.monitoring.sample_period_millis", 86400000L, 86400000L, r3.b);
+    public static final b26 e = a("measurement.config.cache_time", 86400000L, 3600000L, je0.a);
+    public static final b26 f = a("measurement.config.url_scheme", "https", "https", p31.a);
+    public static final b26 g = a("measurement.config.url_authority", "app-measurement.com", "app-measurement.com", tz5.a);
+    public static final b26 h = a("measurement.upload.max_bundles", 100, 100, wa4.c);
+    public static final b26 i = a("measurement.upload.max_batch_size", 65536, 65536, q00.a);
+    public static final b26 j = a("measurement.upload.max_bundle_size", 65536, 65536, g16.a);
+    public static final b26 k = a("measurement.upload.max_events_per_bundle", 1000, 1000, i16.a);
+    public static final b26 l = a("measurement.upload.max_events_per_day", 100000, 100000, k16.a);
+    public static final b26 m = a("measurement.upload.max_error_events_per_day", 1000, 1000, yq0.f);
+    public static final b26 n = a("measurement.upload.max_public_events_per_day", 50000, 50000, d52.a);
+    public static final b26 o = a("measurement.upload.max_conversions_per_day", 10000, 10000, jt.c);
+    public static final b26 p = a("measurement.upload.max_realtime_events_per_day", 10, 10, q8.i);
+    public static final b26 q = a("measurement.store.max_stored_events_per_app", 100000, 100000, s03.a);
+    public static final b26 r = a("measurement.upload.url", "https://app-measurement.com/a", "https://app-measurement.com/a", m16.a);
+    public static final b26 s = a("measurement.upload.backoff_period", 43200000L, 43200000L, o16.a);
+
+    static {
+        a("measurement.upload.window_interval", 3600000L, 3600000L, q16.a);
+        t = a("measurement.upload.interval", 3600000L, 3600000L, w8.a);
+        u = a("measurement.upload.realtime_upload_interval", 10000L, 10000L, ln0.b);
+        v = a("measurement.upload.debug_upload_interval", 1000L, 1000L, ha.a);
+        w = a("measurement.upload.minimum_delay", 500L, 500L, jf.a);
+        x = a("measurement.alarm_manager.minimum_interval", 60000L, 60000L, zp.b);
+        y = a("measurement.upload.stale_data_deletion_interval", 86400000L, 86400000L, jb.b);
+        z = a("measurement.upload.refresh_blacklisted_config_interval", 604800000L, 604800000L, t42.a);
+        A = a("measurement.upload.initial_upload_delay_time", 15000L, 15000L, a.c);
+        B = a("measurement.upload.retry_time", 1800000L, 1800000L, n0.c);
+        C = a("measurement.upload.retry_count", 6, 6, b13.c);
+        D = a("measurement.upload.max_queue_time", 2419200000L, 2419200000L, h55.a);
+        E = a("measurement.lifetimevalue.max_currency_tracked", 4, 4, bh3.a);
+        F = a("measurement.audience.filter_result_max_count", 200, 200, zq5.a);
+        G = a("measurement.upload.max_public_user_properties", 25, 25, null);
+        H = a("measurement.upload.max_event_name_cardinality", 500, 500, null);
+        I = a("measurement.upload.max_public_event_params", 25, 25, null);
+        J = a("measurement.service_client.idle_disconnect_millis", 5000L, 5000L, fd.a);
+        Boolean bool = Boolean.FALSE;
+        K = a("measurement.test.boolean_flag", bool, bool, ci0.a);
+        L = a("measurement.test.string_flag", "---", "---", od.b);
+        M = a("measurement.test.long_flag", -1L, -1L, pq0.a);
+        N = a("measurement.test.int_flag", -2, -2, aq0.b);
+        Double valueOf = Double.valueOf(-3.0d);
+        O = a("measurement.test.double_flag", valueOf, valueOf, et0.a);
+        P = a("measurement.experiment.max_ids", 50, 50, eo.c);
+        Q = a("measurement.max_bundles_per_iteration", 100, 100, oo.c);
+        R = a("measurement.sdk.attribution.cache.ttl", 604800000L, 604800000L, q11.a);
+        S = a("measurement.redaction.app_instance_id.ttl", 7200000L, 7200000L, i92.c);
+        Boolean bool2 = Boolean.TRUE;
+        a("measurement.collection.log_event_and_bundle_v2", bool2, bool2, kn1.b);
+        T = a("measurement.quality.checksum", bool, bool, null);
+        U = a("measurement.audience.use_bundle_end_timestamp_for_non_sequence_property_filters", bool, bool, gp1.b);
+        V = a("measurement.audience.refresh_event_count_filters_timestamp", bool, bool, ur1.a);
+        W = a("measurement.audience.use_bundle_timestamp_for_event_count_filters", bool, bool, fr.c);
+        X = a("measurement.sdk.collection.retrieve_deeplink_from_bow_2", bool2, bool2, f52.d);
+        Y = a("measurement.sdk.collection.last_deep_link_referrer_campaign2", bool, bool, vu1.a);
+        Z = a("measurement.lifecycle.app_in_background_parameter", bool, bool, oa2.a);
+        a0 = a("measurement.integration.disable_firebase_instance_id", bool, bool, as.e);
+        b0 = a("measurement.collection.service.update_with_analytics_fix", bool, bool, iv1.c);
+        c0 = a("measurement.client.firebase_feature_rollout.v1.enable", bool2, bool2, bg1.a);
+        d0 = a("measurement.client.sessions.check_on_reset_and_enable2", bool2, bool2, os.b);
+        a("measurement.collection.synthetic_data_mitigation", bool, bool, c73.d);
+        e0 = a("measurement.service.storage_consent_support_version", 203600, 203600, t6.a);
+        a("measurement.client.click_identifier_control.dev", bool, bool, pt3.a);
+        a("measurement.service.click_identifier_control", bool, bool, t60.a);
+        f0 = a("measurement.service.store_null_safelist", bool2, bool2, u60.b);
+        g0 = a("measurement.service.store_safelist", bool2, bool2, cv.a);
+        h0 = a("measurement.redaction.no_aiid_in_config_request", bool2, bool2, nb4.b);
+        i0 = a("measurement.redaction.config_redacted_fields", bool2, bool2, cx0.e);
+        j0 = a("measurement.redaction.upload_redacted_fields", bool2, bool2, ke2.b);
+        k0 = a("measurement.redaction.upload_subdomain_override", bool2, bool2, m70.f);
+        l0 = a("measurement.redaction.device_info", bool2, bool2, vx4.f);
+        m0 = a("measurement.redaction.user_id", bool2, bool2, m15.a);
+        n0 = a("measurement.redaction.google_signals", bool2, bool2, q06.a);
+        o0 = a("measurement.collection.enable_session_stitching_token.service", bool, bool, ao4.a);
+        p0 = a("measurement.collection.enable_session_stitching_token.client.dev", bool, bool, uz.a);
+        q0 = a("measurement.redaction.app_instance_id", bool2, bool2, jn0.a);
+        r0 = a("measurement.redaction.populate_ephemeral_app_instance_id", bool2, bool2, bm5.a);
+        s0 = a("measurement.redaction.enhanced_uid", bool2, bool2, v06.a);
+        t0 = a("measurement.redaction.e_tag", bool2, bool2, r00.a);
+        u0 = a("measurement.redaction.client_ephemeral_aiid_generation", bool2, bool2, z06.a);
+        v0 = a("measurement.redaction.retain_major_os_version", bool2, bool2, h20.a);
+        a("measurement.redaction.scion_payload_generator", bool2, bool2, p0.b);
+        w0 = a("measurement.audience.dynamic_filters.oob_fix", bool2, bool2, a13.b);
+        x0 = a("measurement.service.clear_global_params_on_uninstall", bool2, bool2, gp0.c);
+    }
+
+    public static b26 a(String str, Object obj, Object obj2, s16 s16Var) {
+        b26 b26Var = new b26(str, obj, obj2, s16Var);
+        a.add(b26Var);
+        return b26Var;
+    }
+
+    public static Map b(Context context) {
+        h86 a2 = h86.a(context.getContentResolver(), z86.a(), vx5.a);
+        if (a2 == null) {
+            return Collections.emptyMap();
+        }
+        return a2.b();
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="64.0dip" android:width="8.0dip" android:viewportWidth="8.0" android:viewportHeight="64.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_snow_bar_half__0" android:pathData="M0,1.712C0,1.712 0,2.5 3.924,2.5C8,2.5 8,1.712 8,1.712L8,59.003C8,61.212 6.209,63.003 4,63.003C1.791,63.003 0,61.212 0,59.003L0,1.712Z" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/$ic_snow_bar_half__1" android:pathData="M8,1.5C8,2.052 6.209,2.5 4,2.5C1.791,2.5 0,2.052 0,1.5C0,0.948 1.791,0.5 4,0.5C6.209,0.5 8,0.948 8,1.5Z" />
+</vector>

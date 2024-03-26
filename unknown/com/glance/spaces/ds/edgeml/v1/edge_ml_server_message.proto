@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.glance.spaces.ds.edgeml.v1";
+
+package com.glance.spaces.ds.edgeml.v1;
+
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+
+message EdgeMlServerMessage {
+  common.CommonServerParams common_params = 1;
+  snp.SnpParams snp_params = 2;
+  repeated ServerEdgeMlNotification notifications = 3;
+}
+
+message ServerEdgeMlNotification {
+  oneof body {
+    MlModelRefreshNotification ml_model_refresh_notification = 1;
+  }
+}
+
+message MlModelRefreshNotification {
+  string model_url = 1;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+
+message PrefDisplayConfig {
+  string display_name = 1;
+  string icon_url = 2;
+  string abbreviation = 3;
+  string banner_logo = 4;
+  string description = 5;
+}

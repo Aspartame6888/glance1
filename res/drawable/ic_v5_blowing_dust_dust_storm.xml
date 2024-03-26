@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="28.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_v5_blowing_dust_dust_storm__0" android:pathData="M22.72,4.16a5.26,5.26 0,0 0,-5.29 5.21,0.59 0.59,0 0,0 0.57,0.63 0.58,0.58 0,0 0,0.59 -0.58,4.11 4.11,0 0,1 8.22,0 4.09,4.09 0,0 1,-4.11 4.05H1.59a0.58,0.58 0,1 0,0 1.16h21.13A5.25,5.25 0,0 0,28 9.37a5.25,5.25 0,0 0,-5.28 -5.21z" />
+    <path android:fillColor="@drawable/$ic_v5_blowing_dust_dust_storm__1" android:pathData="M1.59,11.11h10a4.08,4.08 0,0 0,4.1 -4.06,4.11 4.11,0 0,0 -8.21,0 0.59,0.59 0,0 0,1.17 0,2.94 2.94,0 0,1 5.87,0A2.92,2.92 0,0 1,11.57 10H1.59a0.58,0.58 0,0 0,0 1.16v-0.05z" />
+    <path android:fillColor="@drawable/$ic_v5_blowing_dust_dust_storm__2" android:pathData="M21.54,23.84A2.92,2.92 0,0 1,18.61 21a0.58,0.58 0,0 0,-0.59 -0.58,0.59 0.59,0 0,0 -0.59,0.58 4.11,4.11 0,1 0,4.11 -4.06H1.59a0.58,0.58 0,1 0,0 1.16h20a2.9,2.9 0,1 1,0 5.79l-0.05,-0.05z" />
+</vector>

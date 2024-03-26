@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message TopThreeMxlConfig {
+  common.Tag tag = 1;
+  common.Image title_image = 2;
+  common.Image top_one_image = 3;
+  common.Image top_two_image = 4;
+  common.Image top_three_image = 5;
+}

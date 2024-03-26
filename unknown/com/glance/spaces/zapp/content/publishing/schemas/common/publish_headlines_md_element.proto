@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.common";
+
+package com.glance.spaces.zapp.content.publishing.schemas.common;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/publish_headlines_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+
+message PublishHeadlinesMdElement {
+  common.PublishHeadlinesElement headlines_element = 1;
+  common.Image tag_icon = 2;
+}

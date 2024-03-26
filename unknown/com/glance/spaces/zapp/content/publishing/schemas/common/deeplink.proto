@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.common";
+
+package com.glance.spaces.zapp.content.publishing.schemas.common;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/icon.proto";
+
+message Deeplink {
+  string name = 1;
+  string deeplink = 2;
+  Icon icon = 3;
+}

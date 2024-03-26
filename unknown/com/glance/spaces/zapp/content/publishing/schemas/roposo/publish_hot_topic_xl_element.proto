@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.roposo";
+
+package com.glance.spaces.zapp.content.publishing.schemas.roposo;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/rating.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/tag.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/title.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/views.proto";
+
+message PublishHotTopicXlElement {
+  reserved 9;
+  reserved "deeplink";
+
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Title subtitle = 3;
+  common.Image logo = 4;
+  common.Tag tag = 5;
+  common.Views view_count = 6;
+  common.Rating rating = 7;
+  common.Image image = 8;
+  string background_color = 10;
+}

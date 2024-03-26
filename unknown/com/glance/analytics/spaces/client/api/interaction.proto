@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message Interaction {
+  /* oneof as rich enums
+   *
+   * This value could have been a simple enum.
+   * However, we may want to add more description to each type of interaction
+   * in the future.
+   */
+  oneof mode {
+    Tap tap = 1;
+    Swipe swipe = 2;
+    LongPress long_press = 3;
+    Toggle toggle = 4;
+  }
+
+  message Tap {
+    TapType type = 1;
+
+    enum TapType {
+      UNKNOWN = 0;
+      WIDGET = 1;
+      CHEVRON = 2;
+      CONTENT = 3;
+    }
+  }
+
+  message Swipe {
+    SwipeDirection direction = 1;
+
+    enum SwipeDirection {
+      LEFT = 0;
+      RIGHT = 1;
+      UP = 2;
+      DOWN = 3;
+    }
+  }
+
+  message LongPress {
+  }
+
+  enum Toggle {
+    TOGGLE_ON = 0;
+    TOGGLE_OFF = 1;
+  }
+}

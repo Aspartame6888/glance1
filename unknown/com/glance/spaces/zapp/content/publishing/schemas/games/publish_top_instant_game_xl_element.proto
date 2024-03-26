@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.games";
+
+package com.glance.spaces.zapp.content.publishing.schemas.games;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/gaming/game_info.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/element_cta.proto";
+
+message PublishTopInstantGameXlElement {
+  common.gaming.GameInfo game_info = 1;
+  string view_more_cta = 2;
+  common.ElementCta view_more = 3;
+}
+

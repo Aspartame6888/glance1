@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.space.client";
+
+package com.glance.spaces.analytics.space.client;
+
+import "google/protobuf/timestamp.proto";
+import "com/glance/spaces/analytics/common/analytics_event_params.proto";
+
+message SpaceEvent {
+  string space_id = 2;
+  string space_impression_id = 3;
+  string start_source = 4;
+  string end_source = 5;
+  string space_position = 6;
+  common.AnalyticsEventParams analytics_event_params = 7;
+  google.protobuf.Timestamp end_timestamp = 8;
+  string space_name = 9;
+  string space_screen = 10;
+  google.protobuf.Timestamp _25perc_Scroll_Timestamp = 11;
+  google.protobuf.Timestamp _50perc_Scroll_Timestamp = 12;
+  google.protobuf.Timestamp _75perc_Scroll_Timestamp = 13;
+  google.protobuf.Timestamp _100perc_Scroll_Timestamp = 14;
+  string glance_session_id = 15;
+  string space_session_id = 16;
+  string app_session_id = 17;
+}

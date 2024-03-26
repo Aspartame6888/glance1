@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/logo.proto";
+
+message League {
+  int32 id = 1 [deprecated = true];
+  string name = 2;
+  zapp.content.common.Logo logo = 3;
+  string abbreviation = 4;
+  string league_id = 5;
+}

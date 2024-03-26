@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/weather_forecast.proto";
+import "com/glance/spaces/zapp/content/common/weather_alert.proto";
+import "com/glance/spaces/zapp/content/common/weather_common.proto";
+import "com/glance/spaces/zapp/content/common/media_content.proto";
+
+
+
+message WeatherInfoLnElement{
+  common.Title title = 1;
+  content.common.Image image = 2;
+  string main_text = 3;
+  string info = 4;
+  content.common.Image bg_image = 5 [ deprecated = true ];
+  string description = 6;
+  common.BaseWeatherContent current_weather = 7;
+  repeated common.WeatherForecast weather_forecast = 8;
+  repeated common.WeatherAlerts alerts = 9;
+  content.common.MediaContent bg_media = 10;
+}

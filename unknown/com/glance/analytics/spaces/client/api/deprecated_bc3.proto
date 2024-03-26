@@ -1,0 +1,24 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/zapp_content.proto";
+import "com/glance/analytics/spaces/client/api/element_location.proto";
+import "com/glance/analytics/spaces/client/api/interaction.proto";
+import "com/glance/analytics/spaces/client/api/render_event.proto";
+import "com/glance/analytics/spaces/client/api/zapp_ext.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.internal"; // Bug compatibility
+
+package com.glance.analytics.spaces.client.this_does_not_matter;
+
+message ZappContentElement {
+  option deprecated = true;
+  string zapp_id = 1 [deprecated = true];
+  string widget_id = 2 [deprecated = true];
+  string content_id = 3;
+  reserved 4;
+  com.glance.analytics.spaces.client.api.ZappExt ext = 5;
+  reserved 6;
+  int32 zapp_idN = 7;
+  int32 widget_idN = 8;
+  string space_id = 9;
+}

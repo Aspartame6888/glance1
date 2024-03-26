@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.roposo";
+
+package com.glance.spaces.zapp.content.roposo;
+
+import "com/glance/spaces/zapp/content/common/count.proto";
+import "com/glance/spaces/zapp/content/common/label.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+
+message EntertainmentVideoLhElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Label label = 3;
+  common.Count view_count = 4;
+  string destination_url = 5;
+  string thumbnail_url = 6;
+}

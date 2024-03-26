@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.snp.service.v1";
+
+package com.glance.spaces.analytics.snp.service.v1;
+
+import "com/glance/spaces/analytics/space/client/v1/space_analytics_message.proto";
+import "com/glance/spaces/analytics/snp/ack.proto";
+
+
+service SpaceAnalyticsService {
+  rpc HandleSpaceAnalyticsMessage (space.client.v1.SpaceAnalyticsMessage) returns (snp.Ack) {}
+}

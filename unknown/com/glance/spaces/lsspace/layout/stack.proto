@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.layout";
+
+package com.glance.spaces.lsspace.layout;
+
+import "com/glance/spaces/lsspace/layout/style.proto";
+import "com/glance/spaces/lsspace/layout/tray.proto";
+import "validate/validate.proto";
+
+message Stack {
+  string id = 1;             //  Not used for L0
+  double weight = 2;         //  Not used for L0
+  string title = 3;          //  Not used for L0
+  Style style = 4;           //  Not used for L0
+  repeated Tray trays = 5 [(validate.rules).repeated = {min_items: 1}];
+  bool hidden = 6;
+}

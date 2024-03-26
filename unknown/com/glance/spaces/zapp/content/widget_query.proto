@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+import "validate/validate.proto";
+
+message WidgetQuery {
+  string id = 1 [deprecated = true];
+  string hash = 2;
+  int32 zapp_widget_identifier = 3;
+}

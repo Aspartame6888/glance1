@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/sports/l1/match_fixture.proto";
+import "com/glance/spaces/zapp/content/sports/l1/l1_sports_content_element.proto";
+
+message AllTabResponse {
+  repeated sports.l1.MatchFixture upcoming_games = 1;
+  repeated sports.l1.MatchFixture previous_games = 2;
+  repeated sports.l1.L1SportsContentElement highlights = 3;
+  repeated sports.l1.L1SportsContentElement news = 4;
+}

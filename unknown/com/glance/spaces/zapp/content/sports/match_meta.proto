@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/sports/match_type.proto";
+import "com/glance/spaces/zapp/content/sports/running_period.proto";
+import "com/glance/spaces/zapp/content/sports/team.proto";
+import "com/glance/spaces/zapp/content/common/label.proto";
+import "com/glance/spaces/zapp/content/sports/sports_type.proto";
+
+message MatchMeta {
+  string match_id = 1;
+  MatchType type = 2;
+  int64 timestamp = 3;
+  string status = 4;
+  Team team1 = 5;
+  Team team2 = 6;
+  RunningPeriod running_period = 7;
+  string venue = 8;
+  common.Tag live_tag = 9;
+  common.Tag league_tag = 10;
+  common.Label match_outcome_info = 11;
+  SportsType sports_type = 12;
+}

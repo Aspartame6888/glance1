@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.content.server.v1";
+
+package com.glance.spaces.content.server.v1;
+
+import "com/glance/spaces/ds/edgeml/v1/ml_features.proto";
+import "com/glance/spaces/snp/service/v1/widget_element.proto";
+
+message L0ContentCandidate {
+    reserved 1 to 16;
+    reserved "id", "weight", "element_cta", "categories", "start_time", "end_time", "language";
+    reserved "published_at", "parent_content_id", "sub_categories", "publisher_id", "l0transformations";
+    repeated Feature features = 17;
+    zapp.content.WidgetElement widget_element = 18;
+}
+
+
+// To send features to the client along with the L0ContentCandidates
+// to enable ML inferencing on the client side.
+message Feature {
+    oneof typed_feature {
+        ds.edgeml.ContentFeature content_feature = 1;
+        ds.edgeml.UserFeature user_feature = 2;
+    }
+}

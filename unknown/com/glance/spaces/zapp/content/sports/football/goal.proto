@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports.football";
+
+package com.glance.spaces.zapp.content.sports.football;
+
+message Goal {
+  string player_name = 1;
+  repeated GoalDetail details = 2;
+
+  message GoalDetail {
+    int32 game_time = 1;
+    int32 injury_time = 2;
+    string goal_type = 3;
+  }
+}

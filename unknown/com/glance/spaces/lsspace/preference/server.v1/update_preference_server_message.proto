@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+
+message UpdatePreferenceServerMessage {
+  common.CommonServerParams common_params = 1;
+  snp.SnpParams snp_params = 2;
+}

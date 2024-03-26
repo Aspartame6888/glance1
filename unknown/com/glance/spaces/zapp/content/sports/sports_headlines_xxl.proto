@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/headlines_xxl_element.proto";
+
+message SportsHeadlinesXxlElement {
+  common.HeadlinesXxlElement headlines_xxl_element = 1;
+  string leagueId = 2;
+  repeated string teamIds = 3;
+}
+

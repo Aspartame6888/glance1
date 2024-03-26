@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports.football";
+
+package com.glance.spaces.zapp.content.sports.football;
+
+import "com/glance/spaces/zapp/content/sports/football/red_card.proto";
+import "com/glance/spaces/zapp/content/sports/football/goal.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message FootballInfo {
+  bool is_penalty_shootout = 1;
+  string penalty_score = 2;
+  common.Image goal_icon = 3;
+  repeated Goal goals = 4;
+  common.Image red_card_icon = 5;
+  repeated RedCard red_cards = 6;
+}

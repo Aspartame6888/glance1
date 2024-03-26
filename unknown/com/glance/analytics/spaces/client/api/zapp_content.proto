@@ -1,0 +1,20 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/zapp_ext.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message ZappContentElement {
+  string zapp_id = 1 [deprecated = true];
+  string widget_id = 2 [deprecated = true];
+  string content_id = 3;
+  reserved 4;
+  ZappExt ext = 5;
+  reserved 6;
+  int32 zapp_idN = 7;
+  int32 widget_idN = 8;
+  string space_id = 9;
+  string serving_id = 10;
+}

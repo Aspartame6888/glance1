@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.roposo";
+
+package com.glance.spaces.zapp.content.roposo;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+
+message EntertainmentMdElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Title subtitle = 3;
+  common.Image logo = 4;
+  common.Tag tag = 5;
+  common.Image image = 6;
+}

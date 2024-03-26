@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="63.0dip" android:width="8.0dip" android:viewportWidth="8.0" android:viewportHeight="63.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_rain_bar_half__0" android:pathData="M0,1.5C0,1.5 0.5,2 4,2C7.5,2 8,1.5 8,1.5V59C8,61.209 6.209,63 4,63C1.791,63 0,61.209 0,59V1.5Z" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/$ic_rain_bar_half__1" android:pathData="M8,1C8,1.552 6.209,2 4,2C1.791,2 0,1.552 0,1C0,0.448 1.791,0 4,0C6.209,0 8,0.448 8,1Z" />
+</vector>

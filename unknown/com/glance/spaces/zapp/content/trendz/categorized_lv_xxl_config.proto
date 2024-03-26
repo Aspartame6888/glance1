@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/zapp/content/common/deeplink.proto";
+
+message CategorizedLvXxlConfig {
+  common.Deeplink preferences_cta = 1;
+  common.Deeplink view_more_cta = 2;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports.l1";
+
+package com.glance.spaces.zapp.content.sports.l1;
+
+import "com/glance/spaces/zapp/content/sports/match_meta.proto";
+import "com/glance/spaces/zapp/content/sports/league.proto";
+import "com/glance/spaces/zapp/content/sports/match_tv_station.proto";
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+
+message MatchFixture {
+    MatchMeta meta = 1;
+    string season_name = 2;
+    League league = 4;
+    repeated MatchTvStation tv_stations = 5;
+    common.ElementCta element_cta = 6;
+}

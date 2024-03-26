@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.snp";
+
+package com.glance.spaces.analytics.snp;
+
+message Ack {
+  string message_id = 1;
+  AckStatus status = 2;
+  string description = 3;
+}
+
+enum AckStatus {
+  ACK_UNSPECIFIED = 0;
+  OK = 1;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.snp.service.v1";
+
+package com.glance.spaces.snp.service.v1;
+
+import "com/glance/spaces/snp/service/v1/client_content_message.proto";
+import "com/glance/spaces/snp/service/v1/client_live_widget_message.proto";
+import "com/glance/spaces/snp/service/v1/l0_client_message.proto";
+import "com/glance/spaces/snp/service/v1/l0_server_message.proto";
+import "com/glance/spaces/snp/service/v1/onboarding_state_change.proto";
+import "com/glance/spaces/snp/service/v1/server_content_message.proto";
+import "com/glance/spaces/snp/service/v1/server_live_widget_message.proto";
+
+service ZappService {
+  rpc HandleContentMessage (stream zapp.content.client.v1.ClientContentMessage) returns (stream zapp.content.server.v1.ServerContentMessage) {}
+  rpc HandleLiveWidgetMessage (stream zapp.content.client.v1.ClientLiveWidgetMessage) returns (stream zapp.content.server.v1.ServerLiveWidgetMessage) {}
+  rpc HandleL0Message (stream content.client.v1.ClientL0Message) returns (stream content.server.v1.ServerL0Message) {}
+  rpc RecordOnboardingStateChange(zapp.content.v1.OnboardingStateChangeRequest) returns (zapp.content.v1.OnboardingStateChangeResponse);
+}

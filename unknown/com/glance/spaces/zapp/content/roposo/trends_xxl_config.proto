@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.roposo";
+
+package com.glance.spaces.zapp.content.roposo;
+
+import "com/glance/spaces/zapp/content/common/deeplink.proto";
+
+message TrendsXxlConfig {
+  common.Deeplink view_more = 1;
+}

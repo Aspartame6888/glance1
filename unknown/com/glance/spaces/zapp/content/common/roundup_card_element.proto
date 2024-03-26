@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+import "com/glance/spaces/zapp/content/common/count.proto";
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/common/logo.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/video.proto";
+
+message RoundupCardElement {
+  string id = 1;
+  Title title = 2;
+  Timestamp timestamp = 3;
+  Logo logo = 4;
+  Poster poster = 5;
+  Tag tag = 6;
+  Count view_count = 7;
+  oneof attributes {
+    Video video = 9;
+  }
+  ElementCta element_cta = 10;
+}
+

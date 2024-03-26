@@ -1,0 +1,36 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/element_location.proto";
+import "com/glance/analytics/spaces/client/api/zapp_content.proto";
+import "com/glance/analytics/spaces/client/api/content_address.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message RenderSubTypes {
+  oneof sub_type {
+      InViewport in_viewport = 1; // viewable on the screen
+      UIBuilt ui_built = 2; // element attached to the page (DOM equivalent)
+  }
+}
+
+message InViewport {
+}
+
+message UIBuilt {
+}
+
+message RenderEvent {
+  option deprecated = true;
+  RenderTarget target = 1;
+  RenderSubTypes sub_type = 2;
+  ElementLocation element_location = 3;
+}
+
+message RenderTarget {
+  option deprecated = true;
+  oneof target {
+    ZappContentElement zapp_content = 1;
+  }
+}

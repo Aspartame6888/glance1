@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/zapp/content/games/featured_game_xl_config.proto";
+import "com/glance/spaces/zapp/content/games/leaderboard_game_lh_config.proto";
+import "com/glance/spaces/zapp/content/games/recently_played_games_md_config.proto";
+import "com/glance/spaces/zapp/content/games/live_stream_xxl_config.proto";
+import "com/glance/spaces/zapp/content/games/top_instant_game_xl_config.proto";
+import "com/glance/spaces/zapp/content/roposo/trends_xxl_config.proto";
+import "com/glance/spaces/zapp/content/sports/headlines_xxl_config.proto";
+import "com/glance/spaces/zapp/content/sports/league_match_xxl_config.proto";
+import "com/glance/spaces/zapp/content/sports/team_match_xxl_config.proto";
+import "com/glance/spaces/zapp/content/sports/standings_xxl_config.proto";
+import "com/glance/spaces/zapp/content/trendz/categorized_lv_xxl_config.proto";
+import "com/glance/spaces/zapp/content/games/new_arrivals_xl_config.proto";
+import "com/glance/spaces/zapp/content/games/editors_choice_xxl_config.proto";
+import "com/glance/spaces/zapp/content/games/top_three_mxl_config.proto";
+import "com/glance/spaces/zapp/content/games/community_xxl_config.proto";
+import "com/glance/spaces/zapp/content/games/instant_game_xxl_config.proto";
+import "com/glance/spaces/zapp/content/shop/trending_today_xxl_config.proto";
+
+message WidgetDeeplinkConfig {
+  oneof typed_element {
+    CategorizedLvXxlConfig categorized_lv_xxl = 1;
+    sports.LeagueMatchXxlConfig league_match_xxl = 2;
+    sports.TeamMatchXxlConfig team_match_xxl = 3;
+    games.FeaturedGameXlConfig featured_game_xl = 4;
+    games.LeaderboardGameLhConfig leaderboard_lh = 5;
+    games.TopInstantGameXlConfig top_instant_game_xl = 6;
+    games.RecentlyPlayedGamesMdConfig recently_played_games_md = 7;
+    sports.HeadlinesXxlConfig headlines_xxl = 8;
+    games.LiveStreamXxlConfig live_stream_xxl = 9;
+    games.NewArrivalsXlConfig new_arrivals_game_xl = 10;
+    games.EditorsChoiceXxlConfig editors_choice_xxl = 11;
+    games.TopThreeMxlConfig top_three_mxl = 12;
+    games.CommunityXxlConfig community_xxl = 13;
+    games.InstantGameXxlConfig instant_game_xxl = 14;
+    roposo.TrendsXxlConfig trends_xxl = 15;
+    sports.StandingsXxlConfig standings_xxl = 16;
+    shop.TrendingTodayXxlConfig trending_today_xxl = 17;
+  }
+}

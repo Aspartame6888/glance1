@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/txt_hourly_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="2.0sp" android:translationX="1.0dip" android:fontFamily="sans-serif" android:letterSpacing="0.04" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/dp_12" android:textColor="@color/white" android:gravity="center|top" android:layout_gravity="center_horizontal" android:id="@id/txt_hourly_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:minEms="4" android:lineSpacingExtra="2.0sp" android:alpha="1.0" android:letterSpacing="0.04" />
+</LinearLayout>

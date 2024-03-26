@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:layout_marginBottom="@dimen/dp_12"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/row2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <androidx.cardview.widget.CardView android:clipChildren="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10" app:cardCornerRadius="@dimen/dp_4" app:cardElevation="0.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/barchart_row1" android:background="@drawable/ic_precip_bar_empty" android:layout_width="@dimen/dp_8" android:layout_height="@dimen/dp_100" android:layout_weight="1.0">
+                <View android:id="@id/view_empty_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <View android:id="@id/view_fill_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <com.zapp.oneweatherzapp.presentation.views.MarqueeTextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/precip_percent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_6" android:fontFamily="sans-serif" />
+        <com.zapp.oneweatherzapp.presentation.views.MarqueeTextView android:textSize="@dimen/sp_12" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/day_segment" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_8" android:textAllCaps="false" android:fontFamily="sans-serif" app:textAllCaps="true" />
+    </LinearLayout>
+</RelativeLayout>

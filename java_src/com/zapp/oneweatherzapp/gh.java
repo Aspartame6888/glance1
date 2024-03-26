@@ -1,0 +1,8 @@
+package com.zapp.oneweatherzapp;
+/* compiled from: R8$$SyntheticClass */
+/* loaded from: classes2.dex */
+public final /* synthetic */ class gh {
+    public static void a(String str, int i, String str2) {
+        nh2.f(str2, str + i);
+    }
+}

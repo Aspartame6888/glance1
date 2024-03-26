@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common.gaming";
+package com.glance.spaces.common.gaming;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message Comment {
+  zapp.content.common.Image user_avatar = 1;
+  string text = 2;
+}

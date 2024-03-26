@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.sports";
+
+package com.glance.spaces.zapp.content.publishing.schemas.sports;
+
+message PublishScoreColumn {
+  string header = 1;
+  string team_1_score = 2;
+  string team_2_score = 3;
+}

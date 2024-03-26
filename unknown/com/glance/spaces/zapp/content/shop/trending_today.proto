@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.shop";
+
+package com.glance.spaces.zapp.content.shop;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+message TrendingToday {
+  common.Tag tag = 1;
+  string label = 2;
+  string trend = 3;
+  string text = 4;
+  common.Image logo = 5;
+  common.Image banner = 6;
+  common.Image image = 7;
+  int64 drop_time = 8; // in milliseconds
+}

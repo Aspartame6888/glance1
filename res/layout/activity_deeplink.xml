@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/parentContainer" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/fragmentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/logoContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/splashLogo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/glance_logo" android:layout_marginHorizontal="100.0dip" />
+        <com.airbnb.lottie.LottieAnimationView android:layout_gravity="bottom|center" android:id="@id/customLottieAnimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginHorizontal="100.0dip" app:lottie_autoPlay="true" app:lottie_loop="true" />
+    </FrameLayout>
+</FrameLayout>

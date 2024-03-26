@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.snp.service.v1";
+
+package com.glance.spaces.snp.service.v1;
+
+import "com/glance/spaces/ds/edgeml/v1/edge_ml_client_message.proto";
+import "com/glance/spaces/ds/edgeml/v1/edge_ml_server_message.proto";
+import "com/glance/spaces/lsspace/layout/client/v1/client_layout_message.proto";
+import "com/glance/spaces/lsspace/layout/server/v1/server_layout_message.proto";
+import "com/glance/spaces/lsspace/preference/client/v1/update_preference_client_message.proto";
+import "com/glance/spaces/lsspace/preference/server.v1/update_preference_server_message.proto";
+
+
+service LsSpaceService {
+  rpc HandleLayoutMessage (stream lsspace.layout.client.v1.ClientLayoutMessage) returns (stream lsspace.layout.server.v1.ServerLayoutMessage) {}
+  rpc HandleEdgeMlMessage (stream ds.edgeml.v1.EdgeMlClientMessage) returns (stream ds.edgeml.v1.EdgeMlServerMessage) {}
+  rpc UpdatePreferenceMessage (lsspace.preference.client.v1.UpdatePreferenceClientMessage) returns (lsspace.preference.UpdatePreferenceServerMessage) {}
+}

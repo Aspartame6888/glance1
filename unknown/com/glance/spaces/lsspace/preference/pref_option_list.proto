@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+
+import "com/glance/spaces/lsspace/preference/pref_display_config.proto";
+import "com/glance/spaces/lsspace/preference/pref_option.proto";
+
+message PrefOptionList {
+  string id = 1;
+  repeated PrefOption options = 2;
+  PrefDisplayConfig display = 3;
+}

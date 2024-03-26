@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/common/gaming/game_info.proto";
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+
+message RecentlyPlayedGamesMdElement {
+  message TextInfo {
+    string a_few_seconds_ago = 1;
+  }
+  repeated com.glance.spaces.common.gaming.GameInfo game_info = 1;
+  string view_more_cta = 2;
+  zapp.content.common.ElementCta view_more = 3;
+  TextInfo text_info = 4;
+}
+

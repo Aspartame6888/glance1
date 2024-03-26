@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.onboarding";
+
+package com.glance.spaces.zapp.content.onboarding;
+
+import "com/glance/spaces/zapp/content/common/poster.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/deeplink.proto";
+
+message CategorizedLv {
+  common.Title title = 1;
+  common.Poster poster = 2;
+  common.Deeplink preferences = 3;
+  common.Deeplink skip = 4;
+  common.Timestamp timestamp = 5;
+}

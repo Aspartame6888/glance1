@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="data_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bgImage" android:tag="frosted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/control_extra_space" android:layout_marginEnd="@dimen/control_space" android:layout_toStartOf="@id/poster">
+        <TextView android:textColor="@color/white" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_extra_space" android:maxLines="2" style="@style/TitleXSmall" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/logo" android:tag="showinAOD" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+            <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_80" android:ellipsize="end" android:id="@id/publish_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/control_large_space" android:maxLines="1" android:layout_marginStart="@dimen/control_mini_space" android:layout_marginEnd="@dimen/control_medium_space" style="@style/TitleXSmall" />
+            <include android:id="@id/tag" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/tag" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/poster" android:layout_width="@dimen/control_nona_space" android:layout_height="@dimen/control_nona_space" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/control_extra_space" android:layout_alignParentEnd="true" android:layout_marginVertical="@dimen/control_extra_space" />
+    <ImageView android:tag="gradient" android:layout_width="@dimen/control_nona_space" android:layout_height="@dimen/control_nona_space" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/control_extra_space" android:layout_alignParentEnd="true" android:layout_marginVertical="@dimen/control_extra_space" />
+</RelativeLayout>

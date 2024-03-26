@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/common/gaming/featured_games_content.proto";
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+
+message FeaturedGameXlElement {
+  message TextInfo {
+    string views = 1;
+  }
+  string game_name = 1;
+  zapp.content.common.Poster game_banner = 2;
+  repeated spaces.common.gaming.FeaturedGamesContent content = 3;
+  zapp.content.common.ElementCta view_more_cta = 4;
+  zapp.content.common.ElementCta install_cta = 5;
+  repeated zapp.content.common.Poster game_assets = 6;
+  TextInfo text_info = 7;
+}

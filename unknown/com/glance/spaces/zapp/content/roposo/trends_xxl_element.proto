@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.roposo";
+
+package com.glance.spaces.zapp.content.roposo;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/rating.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/views.proto";
+
+message TrendsXxlElement {
+  reserved 8;
+  reserved "deeplink";
+
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Image logo = 3;
+  common.Tag tag = 4;
+  common.Views view_count = 5;
+  common.Rating rating = 6;
+  common.Image image = 7;
+  string background_color = 9;
+}

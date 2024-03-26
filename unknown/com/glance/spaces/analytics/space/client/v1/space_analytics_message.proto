@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.space.client.v1";
+
+package com.glance.spaces.analytics.space.client.v1;
+
+import "com/glance/spaces/analytics/space/client/space_event.proto";
+import "com/glance/spaces/analytics/space/client/tray_event.proto";
+import "com/glance/spaces/analytics/space/client/stack_event.proto";
+import "com/glance/spaces/analytics/snp/snp_params.proto";
+
+message SpaceAnalyticsMessage {
+  repeated EventBody eventBody = 7;
+  message EventBody {
+    oneof body {
+      SpaceEvent space_event = 1;
+      TrayEvent tray_event = 2;
+      StackEvent stack_event = 3;
+    }
+  }
+  snp.SnpParams snp_params = 3;
+}

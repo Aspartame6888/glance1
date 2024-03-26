@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.server.v1";
+
+package com.glance.spaces.zapp.content.server.v1;
+
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+
+message ServerNukeMessage {
+  common.CommonServerParams common_params = 1;
+  snp.SnpParams snp_params = 2;
+  ServerLockscreenNukeNotification lock_screen_notifications = 3;
+}
+
+message ServerLockscreenNukeNotification {
+  oneof body {
+    NukedContent nuked_content = 1;
+    NukedWidget nuked_widget = 2;
+    NukedZapp nuked_zapp = 3;
+    NukedSpace nuked_space = 4;
+    NukedApp nuked_app = 5;
+  }
+}
+
+message NukedContent {
+  string widget_element_id = 1;
+  int32 zapp_widget_identifier = 2;
+}
+
+message NukedWidget {
+  int32 zapp_widget_identifier = 1;
+}
+
+message NukedZapp {
+  int32 zapp_id = 1;
+}
+
+message NukedSpace {
+  int32 space_id = 1;
+}
+
+message NukedApp {
+  string app_version = 1;
+}

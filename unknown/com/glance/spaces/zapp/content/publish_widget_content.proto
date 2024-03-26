@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/roposo/publish_entertainment_ln_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/roposo/publish_entertainment_md_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/roposo/publish_entertainment_video_lh_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/roposo/publish_hot_topic_xl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/roposo/publish_trends_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/shop/publish_product_drops_lv_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/trendz/publish_tagged_article_lh_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_nba_match_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_leaderboard_game_lh_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_top_instant_game_xl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_recently_played_games_md_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/trendz/publish_categorised_lv_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_sports_headlines_xxl.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_match_xxl.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/publish_roundup_data_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_featured_game_xl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_match_ln_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_match_xs_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_off_season.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/publish_headlines_ln_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/publish_headlines_md_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/trendz/publish_tagged_article_ln_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/publish_bg_info_xs_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_recently_played_games_ln_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/publish_roundup_card_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_partner_game_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_live_stream_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_new_arrivals_xl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_editors_choice_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_top_three_mxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_community_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_instant_game_xxl_element.proto";
+
+
+message PublishWidgetContent {
+  oneof typed_element {
+    publishing.schemas.roposo.PublishEntertainmentVideoLhElement entertainment_video_lh = 1;
+    publishing.schemas.shop.PublishProductDropsLvElement product_drops_lv = 2;
+    publishing.schemas.trendz.PublishTaggedArticleLhElement tagged_article = 3;
+    publishing.schemas.sports.PublishNbaMatchElement nba_match = 4;
+    publishing.schemas.games.PublishLeaderboardGameLhElement leaderboard_game_lh = 5;
+    publishing.schemas.games.PublishTopInstantGameXlElement top_instant_game_xl = 6;
+    publishing.schemas.games.PublishRecentlyPlayedGamesMdElement recently_played_games_md = 7;
+    publishing.schemas.trendz.PublishCategorisedLvXxlElement top_story_categorised_lv_xxl = 8;
+    publishing.schemas.sports.PublishSportsHeadlinesXxlElement sports_headlines_xxl = 9;
+    publishing.schemas.sports.PublishMatchXxl league_match_xxl = 10;
+    publishing.schemas.sports.PublishMatchXxl team_match_xxl = 11;
+    publishing.schemas.common.PublishRoundupDataElement roundup_data_element = 12;
+    publishing.schemas.games.PublishFeaturedGameXlElement featured_game_xl = 13;
+    publishing.schemas.sports.PublishOffSeason off_season_mxl = 15;
+    publishing.schemas.trendz.PublishTaggedArticleLnElement tagged_article_ln_element = 16;
+    publishing.schemas.common.PublishHeadlinesLnElement headlines_ln_element = 17;
+    publishing.schemas.PublishBgInfoXsElement bg_info_xs_element = 18;
+    publishing.schemas.sports.PublishMatchXsElement match_xs_element = 19;
+    publishing.schemas.sports.PublishMatchLnElement match_ln_element = 20;
+    publishing.schemas.common.PublishHeadlinesMdElement headlines_md_element = 21;
+    publishing.schemas.games.PublishRecentlyPlayedGamesLnElement recently_played_games_ln = 22;
+    publishing.schemas.common.PublishRoundupCardElement roundup_card_element_ln = 23;
+    publishing.schemas.common.PublishRoundupCardElement roundup_card_element_md = 24;
+    publishing.schemas.games.PublishPartnerGameXxlElement partner_game_xxl_element = 25;
+    publishing.schemas.games.PublishLiveStreamXxlElement live_stream_xxl_element = 26;
+    publishing.schemas.games.PublishNewArrivalsXlElement new_arrivals_xl_element = 27;
+    publishing.schemas.games.PublishEditorsChoiceXxlElement editors_choice_xxl_element = 28;
+    publishing.schemas.games.PublishTopThreeMxlElement top_three_mxl_element = 29;
+    publishing.schemas.games.PublishCommunityXxlElement community_xxl_element = 30;
+    publishing.schemas.games.PublishInstantGameXxlElement instant_game_xxl_element = 31;
+    publishing.schemas.roposo.PublishEntertainmentLnElement entertainment_ln_element = 32;
+    publishing.schemas.roposo.PublishEntertainmentMdElement entertainment_md_element = 33;
+    publishing.schemas.roposo.PublishHotTopicXlElement hot_topic_xl_element = 34;
+    publishing.schemas.roposo.PublishTrendsXxlElement trends_xxl_element = 35;
+  }
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.sports";
+
+package com.glance.spaces.zapp.content.publishing.schemas.sports;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/logo.proto";
+
+message PublishNbaMatchElement {
+  message Team {
+    string name = 1;
+    common.Logo logo = 2;
+  }
+  Team team1 = 1;
+  Team team2 = 2;
+  int64 match_start_time = 3;
+  string match_type = 4;
+  string venue = 5;
+  common.Logo logo = 6;
+  string match_id = 7;
+  reserved 8, 9;
+  reserved "live_element_id", "match_snapshot_url";
+}
+

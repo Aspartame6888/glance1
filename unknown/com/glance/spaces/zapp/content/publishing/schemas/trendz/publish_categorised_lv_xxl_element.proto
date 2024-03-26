@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.trendz";
+
+package com.glance.spaces.zapp.content.publishing.schemas.trendz;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/logo.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/poster.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/title.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/tag.proto";
+
+
+message PublishCategorisedLvXxlElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Logo logo = 3;
+  common.Poster poster = 4;
+  common.Tag tag = 5;
+  common.Image banner = 6;
+}

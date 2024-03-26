@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+enum Modality {
+  MODALITY_UNSPECIFIED = 0;
+  ARTICLE = 1;
+  VIDEO = 2;
+  LIVE_VIDEO = 3;
+  PICTURE_STORY = 4;
+}

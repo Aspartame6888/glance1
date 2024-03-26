@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "com/glance/analytics/spaces/client/api/special_nav_event.proto";
+import "com/glance/analytics/spaces/client/api/render_event.proto";
+import "com/glance/analytics/spaces/client/api/app_lifecycle_event.proto";
+import "com/glance/analytics/spaces/client/internal/sequence.proto";
+import "com/glance/analytics/spaces/client/api/content_address.proto";
+import "com/glance/analytics/spaces/client/api/interaction.proto";
+import "com/glance/analytics/spaces/client/api/deprecated_bc.proto";
+import "com/glance/analytics/spaces/client/api/zapp_widget_event.proto";
+import "com/glance/analytics/spaces/client/internal/dwell.proto";
+
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.internal";
+
+package com.glance.analytics.spaces.client.internal;
+
+message EnrichedActionEvent {
+  AnyActionEvent event = 1;
+  EventOccurrence occurrence = 2;
+  uint64 os_sequence_number = 3 [deprecated = true];
+  Sequence sequence = 4;
+}
+
+message AnyActionEvent {
+  oneof event {
+    com.glance.analytics.spaces.client.api.EngagementEvent engagement = 1 [deprecated = true];
+    com.glance.analytics.spaces.client.api.SpecialNavigationEvent nav = 2;
+    com.glance.analytics.spaces.client.api.RenderEvent render = 3 [deprecated = true];
+    com.glance.analytics.spaces.client.api.AppLifecycleEvent app_lifecycle = 4;
+    com.glance.analytics.spaces.client.api.ZappWidgetEvent zapp_widget = 5;
+  };
+}
+
+message EnrichedContentEventBatch {
+  com.glance.analytics.spaces.client.api.ContentAddress content_address = 1;
+  repeated EnrichedContentEvent events = 2;
+}
+
+message EnrichedContentEvent {
+  Sequence sequence = 1;
+  EventOccurrence occurrence = 2;
+  ContentEvent event = 3;
+}
+
+message ContentEvent {
+  oneof event {
+    com.glance.analytics.spaces.client.api.Interaction interaction = 1;
+    com.glance.analytics.spaces.client.api.RenderSubTypes render = 2;
+    Dwell dwell = 3;
+  };
+}
+
+message EventOccurrence {
+  string nonce = 1; /* colloquially, impression-id */
+  google.protobuf.Timestamp event_time = 2;
+}

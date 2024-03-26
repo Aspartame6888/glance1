@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "validate/validate.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+message MediaContent {
+  enum Type {
+    MEDIA_TYPE_UNKNOWN = 0;
+    VIDEOS = 1;
+    IMAGE = 2;
+    LOTTIE = 3;
+    GIF = 4;
+  }
+  string url = 1;
+  Type mediaType = 2 [(validate.rules).enum = {not_in: [0]}];
+  string description = 3;
+}
+

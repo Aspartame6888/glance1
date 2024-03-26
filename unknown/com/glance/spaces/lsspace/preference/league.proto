@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+
+import "com/glance/spaces/lsspace/preference/pref_display_config.proto";
+
+message League {
+  string id = 1;
+  PrefDisplayConfig display = 2;
+  string sport_id = 3;
+}

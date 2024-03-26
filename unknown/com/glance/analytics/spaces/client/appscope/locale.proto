@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.appscope";
+
+package com.glance.analytics.spaces.client.appscope;
+
+message Locale {
+  /* IETF BCP 47 language tag. Eg: en, en-US, en-GB, fr, fr-FR, fr-CA, etc.
+
+     The choice of language selected for the display strings on the product. This is
+     not to be confused with the content language preferences.
+
+     This is also not the locale of the phone itself. This value has meaning only when
+     we offer the product in multiple languages
+   */
+  string product_language = 1;
+
+  /* This is the traditional web/app content language preference setting at the OS layer*/
+  repeated AcceptLanguage langs = 2;
+}
+
+message AcceptLanguage {
+  string language_code = 1; // IETF BCP 47 language tag. Eg: en, en-US, en-GB, fr, fr-FR, fr-CA, etc.
+  optional float q_factor = 2; // Priority of the language. value between 1.0 and 0.0
+}

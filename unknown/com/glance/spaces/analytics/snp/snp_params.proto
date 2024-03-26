@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.snp";
+
+package com.glance.spaces.analytics.snp;
+
+import "com/glance/spaces/analytics/snp/ack.proto";
+
+message SnpParams {
+  string x_trace_id = 1;
+  string message_id = 2;
+  bool ack_required = 3;
+  int64 valid_till = 4; // To have a notion of TTL on both client and server messages
+  MessagePriority priority = 5;
+  repeated Ack acks = 6; // Piggybacked acks, so that you can append acks to a message and sent together, if you want to just send acks set this field and everything else is null
+}
+
+enum MessagePriority {
+  MESSAGE_PRIORITY_UNSPECIFIED = 0;
+  LOW = 1;
+  MEDIUM = 2;
+  HIGH = 3;
+}

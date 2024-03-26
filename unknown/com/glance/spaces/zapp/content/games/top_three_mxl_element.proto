@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/common/gaming/game_info.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message TopThreeMxlElement {
+  repeated spaces.common.gaming.GameInfo game_info = 1;
+}
+

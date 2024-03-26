@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+message RemovedWidgetElement {
+  string zapp_widget_id = 1 [deprecated = true];
+  repeated string widget_element_ids = 2;
+  int32 zapp_id = 3;
+  int32 zapp_widget_identifier = 4;
+}

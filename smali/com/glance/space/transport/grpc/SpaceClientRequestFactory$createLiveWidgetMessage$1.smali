@@ -1,0 +1,107 @@
+.class final Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;
+.super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "ClientRequestFactory.kt"
+
+
+# annotations
+.annotation runtime Lcom/zapp/oneweatherzapp/we0;
+    c = "com.glance.space.transport.grpc.SpaceClientRequestFactory"
+    f = "ClientRequestFactory.kt"
+    l = {
+        0xc8
+    }
+    m = "createLiveWidgetMessage"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field L$0:Ljava/lang/Object;
+
+.field L$1:Ljava/lang/Object;
+
+.field label:I
+
+.field synthetic result:Ljava/lang/Object;
+
+.field final synthetic this$0:Lcom/glance/space/transport/grpc/a;
+
+
+# direct methods
+.method public constructor <init>(Lcom/glance/space/transport/grpc/a;Lcom/zapp/oneweatherzapp/j90;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glance/space/transport/grpc/a;",
+            "Lcom/zapp/oneweatherzapp/j90<",
+            "-",
+            "Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;->this$0:Lcom/glance/space/transport/grpc/a;
+
+    .line 2
+    .line 3
+    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;-><init>(Lcom/zapp/oneweatherzapp/j90;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iput-object p1, p0, Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;->result:Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    iget p1, p0, Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;->label:I
+
+    .line 4
+    .line 5
+    const/high16 v0, -0x80000000
+
+    .line 6
+    .line 7
+    or-int/2addr p1, v0
+
+    .line 8
+    iput p1, p0, Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;->label:I
+
+    .line 9
+    .line 10
+    iget-object p1, p0, Lcom/glance/space/transport/grpc/SpaceClientRequestFactory$createLiveWidgetMessage$1;->this$0:Lcom/glance/space/transport/grpc/a;
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    invoke-virtual {p1, v0, v0, p0}, Lcom/glance/space/transport/grpc/a;->a(Lcom/glance/space/transport/grpc/LiveWidgetRequest;Ljava/util/List;Lcom/zapp/oneweatherzapp/j90;)Ljava/io/Serializable;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p0
+
+    .line 17
+    return-object p0
+.end method

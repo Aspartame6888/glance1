@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="data_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bgImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@string/background" />
+    <include android:id="@id/tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_space" android:layout_alignTop="@id/image" android:layout_marginStart="@dimen/control_extra_space" android:layout_marginEnd="@dimen/control_double_space" android:layout_toStartOf="@id/image" android:layout_alignParentStart="true" layout="@layout/tag" />
+    <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_mini_extra_space" android:layout_marginBottom="@dimen/control_micro_space" android:maxLines="2" android:layout_below="@id/tag" android:layout_alignStart="@id/tag" android:layout_alignEnd="@id/tag" style="@style/TitleMedium" />
+    <ImageView android:id="@id/image" android:layout_width="@dimen/control_nona_space" android:layout_height="@dimen/control_nona_space" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerVertical="true" android:contentDescription="@string/image" android:layout_marginEnd="@dimen/control_extra_space" android:layout_alignParentEnd="true" android:layout_marginVertical="@dimen/control_extra_space" />
+</RelativeLayout>

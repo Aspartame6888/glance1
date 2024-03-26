@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.location.rec.server.v1";
+
+package com.glance.spaces.lsspace.location.rec.server.v1;
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/lsspace/location/city_info.proto";
+
+
+
+message ServerLocationRecMessage {
+  common.CommonServerParams common_params = 1;
+  repeated CityInfo city_info = 2;
+}

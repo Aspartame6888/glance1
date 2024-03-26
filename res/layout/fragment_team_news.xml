@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/topNewsListRv" android:background="@color/pageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/nSRL" android:layout_width="fill_parent" android:layout_height="0.0dip" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/nListRv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:spanCount="3" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include android:id="@id/tsProgressBar" layout="@layout/sports_progress_bar" />
+    <androidx.compose.ui.platform.ComposeView android:id="@id/error_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

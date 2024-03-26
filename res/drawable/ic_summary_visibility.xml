@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="17.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="17.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_summary_visibility__0" android:pathData="M23.6,7.807C21.903,3.74 18.22,0.843 13.867,0.153 13.447,0.08 13.013,0.047 12.593,0h-1.52C10.487,0.08 9.9,0.127 9.32,0.247 5.127,1.06 1.633,3.944 0.04,7.907c-0.057,0.134 -0.057,0.285 0,0.42 1.887,4.2 5.06,6.826 9.6,7.673 5.873,1.043 11.681,-2.137 13.967,-7.647 0.081,-0.173 0.079,-0.375 -0.007,-0.546zM11.66,13.48c-2.974,-0.1 -5.305,-2.592 -5.208,-5.566 0.097,-2.975 2.586,-5.309 5.56,-5.215 2.975,0.094 5.312,2.58 5.221,5.554 -0.098,2.982 -2.591,5.32 -5.573,5.227z" android:fillType="nonZero" />
+    <path android:fillColor="@drawable/$ic_summary_visibility__1" android:pathData="M15.067,8.1c-0.003,1.312 -0.797,2.493 -2.011,2.991 -1.214,0.498 -2.609,0.214 -3.532,-0.719 -0.923,-0.932 -1.193,-2.33 -0.682,-3.539 0.51,-1.209 1.7,-1.99 3.011,-1.98 1.782,0.015 3.217,1.465 3.214,3.247z" android:fillType="nonZero" />
+</vector>

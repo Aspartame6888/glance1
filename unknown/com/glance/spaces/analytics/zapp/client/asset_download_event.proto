@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.zapp.client";
+
+package com.glance.spaces.analytics.zapp.client;
+
+import "com/glance/spaces/analytics/common/analytics_event_params.proto";
+
+message AssetDownloadEvent {
+  string content_id = 2;
+  string job_id = 3;
+  string asset_id = 4;
+  AssetDownloadStatus status = 5;
+  common.AnalyticsEventParams analytics_event_params = 6;
+}
+
+enum AssetDownloadStatus {
+  STARTED = 0;
+  SUCCESS = 1;
+  ERROR = 2;
+}

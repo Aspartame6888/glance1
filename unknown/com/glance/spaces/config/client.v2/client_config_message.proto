@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.config.client.v2";
+
+package com.glance.spaces.config.client.v2;
+
+import "com/glance/spaces/snp/snp_params.proto";
+import "com/glance/spaces/common/client_params.proto";
+import "validate/validate.proto";
+
+message ClientConfigMessage {
+  snp.SnpParams snp_params = 1;
+  common.ClientParams client_params = 2 [(validate.rules).message.required = true];
+}

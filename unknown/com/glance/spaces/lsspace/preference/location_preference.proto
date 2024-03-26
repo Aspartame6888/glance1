@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+import "com/glance/spaces/lsspace/location/city_info.proto";
+
+
+message LocationPreference {
+     repeated location.CityInfo cityInfo = 1;
+}
+

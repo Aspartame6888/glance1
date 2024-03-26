@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common";
+
+package com.glance.spaces.common;
+
+import "com/glance/spaces/common/l0_zapp_widget_id.proto";
+import "com/glance/spaces/common/zapp_widget_id.proto";
+import "com/glance/spaces/common/widget_size.proto";
+import "com/glance/spaces/common/widget_type.proto";
+import "com/glance/spaces/common/space_type.proto";
+import "com/glance/spaces/zapp/content/widget_content.proto";
+import "com/glance/spaces/zapp/content/publish_widget_content.proto";
+
+message L0Representation {
+    reserved 1, 7, 8, 9;
+
+    zapp.content.WidgetContent widget_content = 2 [deprecated = true];
+    com.glance.spaces.common.WidgetSize widget_size = 3;
+    com.glance.spaces.common.WidgetType widget_type = 4;
+    string zapp_widget_id = 5 [deprecated = true]; // To be populated for the SDK to use
+    com.glance.spaces.common.L0ZappWidgetId zapp_widget_id_enum = 6 [deprecated = true]; // To be populated by the publisher
+    zapp.content.PublishWidgetContent publish_widget_content = 10;
+    com.glance.spaces.common.ZappWidgetId l0_zapp_widget_id = 11;
+}

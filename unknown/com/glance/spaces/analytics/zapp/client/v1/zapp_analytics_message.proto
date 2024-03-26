@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.zapp.client.v1";
+
+package com.glance.spaces.analytics.zapp.client.v1;
+
+import "com/glance/spaces/analytics/snp/snp_params.proto";
+import "com/glance/spaces/analytics/zapp/client/asset_download_event.proto";
+import "com/glance/spaces/analytics/zapp/client/asset_render_complete_event.proto";
+import "com/glance/spaces/analytics/zapp/client/content_event.proto";
+import "com/glance/spaces/analytics/zapp/client/content_received_event.proto";
+import "com/glance/spaces/analytics/zapp/client/widget_event.proto";
+import "com/glance/spaces/analytics/zapp/client/click_event.proto";
+
+message ZappAnalyticsMessage {
+
+  repeated EventBody eventBody = 9;
+  message EventBody {
+    oneof body {
+      client.WidgetEvent widget_event = 1;
+      client.ContentEvent content_event = 2;
+      client.AssetDownloadEvent asset_download_event = 3;
+      client.AssetRenderCompleteEvent asset_render_complete_event = 4;
+      client.ContentReceivedEvent content_received_event = 5;
+      client.ClickEvent click_event = 6;
+    }
+  }
+  snp.SnpParams snp_params = 3;
+}

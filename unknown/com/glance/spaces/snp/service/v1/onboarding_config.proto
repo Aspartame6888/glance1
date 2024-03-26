@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/common/onboarding_template.proto";
+import "com/glance/spaces/zapp/content/onboarding/banner.proto";
+import "com/glance/spaces/zapp/content/onboarding/categorized_lv.proto";
+import "validate/validate.proto";
+
+message OnboardingConfig {
+  bool hidden = 1;
+  common.OnboardingTemplate template_name = 2 [(validate.rules).enum.defined_only = true];
+  OnboardingCallback callback = 3 [(validate.rules).message.required = true];
+  oneof typed_element {
+    onboarding.Banner banner = 4;
+    onboarding.CategorizedLv categorized_lv = 5;
+  }
+}
+
+message OnboardingCallback {
+  string zapp_widget_id = 1 [(validate.rules).string.min_len = 1, deprecated = true];
+  map<string, string> callback_data = 2; // mostly empty. Server can use it as macros in future if needed or pass-through data
+  int32 zapp_id = 3;
+  int32 zapp_widget_identifier = 4;
+}
+
+
+

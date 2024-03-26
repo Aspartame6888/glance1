@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports.football";
+
+package com.glance.spaces.zapp.content.sports.football;
+
+message RedCard {
+  string player_name = 1;
+  int32 game_time = 2;
+  int32 injury_time = 3;
+}

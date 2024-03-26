@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.sports";
+
+package com.glance.spaces.zapp.content.publishing.schemas.sports;
+
+enum PublishMatchType {
+  MATCH_TYPE_UNSPECIFIED = 0;
+  MATCH_TYPE_PAST = 1;
+  MATCH_TYPE_LIVE = 2;
+  MATCH_TYPE_UPCOMING = 3;
+}

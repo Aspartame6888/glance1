@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/black_80" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_back" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="@dimen/control_double_space" android:elevation="2.0dip" app:layout_constraintBottom_toBottomOf="@id/iv_glance_logo" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/iv_glance_logo" app:srcCompat="@drawable/ic_back_arrow" />
+    <ImageView android:id="@id/iv_glance_logo" android:layout_width="@dimen/control_octa_extra_space" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_hexa_space" android:contentDescription="@string/glance_logo" android:elevation="2.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_glance_logo_white" />
+    <androidx.fragment.app.FragmentContainerView android:id="@id/fcv_onboarding" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/onboarding_gradient" android:scaleType="centerCrop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

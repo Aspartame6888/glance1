@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/nav_targets.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message ElementLocation {
+  uint32 position = 4;
+  oneof location {
+    L0Location l0 = 1;
+    LnLocation ln = 2;
+    L1ListingPage l1 = 3;
+    SettingsScreen settings_screen = 5;
+  }
+}

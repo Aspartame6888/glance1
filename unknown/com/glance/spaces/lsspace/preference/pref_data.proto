@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.preference";
+
+package com.glance.spaces.lsspace.preference;
+
+import "com/glance/spaces/lsspace/preference/news_space_preference.proto";
+import "com/glance/spaces/lsspace/preference/sports_space_preference.proto";
+import "com/glance/spaces/lsspace/preference/games_space_preference.proto";
+import "com/glance/spaces/lsspace/preference/location_preference.proto";
+import "com/glance/spaces/lsspace/preference/home_space_preference.proto";
+
+message PreferenceData {
+  reserved 1;
+  reserved  "preferences";
+  NewsSpacePreference news_space = 2;
+  SportsSpacePreference sports_space = 3;
+  GamesSpacePreference games_space = 4;
+  LocationPreference location = 5;
+  HomeSpacePreference home_space = 6;
+}

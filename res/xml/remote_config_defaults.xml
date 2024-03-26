@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaults>
+    <entry>
+        <key>isUpgradable</key>
+        <value>{"value":"true"}</value>
+    </entry>
+    <entry>
+        <key>mspectrum</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mfi</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mcomcast</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mcc</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mboost</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>musc</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mtmo</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mtracfone</key>
+        <value>{"apikey":"04ba1df291d068210077b82ed1db519c","region":"US"}</value>
+    </entry>
+    <entry>
+        <key>mretus</key>
+        <value>{"apikey":"32e7dea1f7ea1a5d9cf946cad3454503","region":"US"}</value>
+    </entry>
+</defaults>

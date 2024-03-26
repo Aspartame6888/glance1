@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.appscope";
+
+package com.glance.analytics.spaces.client.appscope;
+
+message ApkVersioning {
+  string flattened_version = 1; // some string that combines all the versioning info
+  string build_version = 2; // eg: 10.2.4.283
+  string commit = 3; // eg: ccf684b6878bf93f9e7b454ee71459704b801ddf
+  string flavour = 4; // eg: aosp, motorola
+  string variant = 5; // eg: debug, preRelease, release
+}
+
+message SysUiVersioning {
+  string flattened_version = 1; // some string that combines all the versioning info
+}
+
+message BridgeVersioning {
+  string flattened_version = 1; // some string that combines all the versioning info
+}
+
+message PartnerVersioning {
+  BridgeVersioning bridge = 1;
+  oneof IntegType {
+    SysUiVersioning sysUi = 2;
+    ApkVersioning friendlyApp = 3;
+  }
+}
+
+message ClientAppVersioning {
+  ApkVersioning glanceApp = 1;
+  PartnerVersioning lockscreenHook = 2;
+}

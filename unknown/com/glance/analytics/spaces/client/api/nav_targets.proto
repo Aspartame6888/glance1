@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message L0Location {
+  string content_id = 1;
+}
+
+/*This is tricky for zapp and content. Position on L+n will need some sort of absolute X coordinate or Y coodinate or
+else we will need to provide a way to have relative positions to its parent. Need SDK inputs on what usually is available
+ at the time of firing the event*/
+message LnLocation {
+  string spaceId = 1;
+  string trayId = 2;
+  string topNavId = 3;
+  int32 zapp_idN = 4;
+  int32 widget_idN = 5;
+}
+
+message L1ListingPage {
+  string tabId = 1;
+  int32 listPosition = 2;
+}
+
+message SettingsScreen {
+  SettingsScreenType type = 1;
+
+  enum SettingsScreenType {
+    UNKNOWN = 0;
+    MAIN_SETTINGS = 1;
+    DATA_USAGE = 2;
+    PRIVACY_SETTINGS = 3;
+    DEVICE_IDENTIFIERS = 4;
+  }
+}

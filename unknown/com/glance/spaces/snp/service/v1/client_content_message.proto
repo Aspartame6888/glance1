@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.client.v1";
+
+package com.glance.spaces.zapp.content.client.v1;
+
+import "com/glance/spaces/common/common_client_params.proto";
+import "com/glance/spaces/common/time_zone.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+import "com/glance/spaces/zapp/content/widget_query.proto";
+import "validate/validate.proto";
+
+
+message ClientContentMessage {
+  common.CommonClientParams common_params = 1 [(validate.rules).message.required = true];
+  snp.SnpParams snp_params = 2;
+  repeated ClientContentNotification notifications = 3;
+}
+
+message ClientContentNotification {
+  reserved 4;
+  reserved "onboarding_callback";
+  oneof body {
+    RequestContent request_content = 2;
+    ForceFetchContent force_fetch_content = 3;
+  }
+}
+
+message RequestContent {
+  common.TimeZone time_zone = 1;
+  repeated WidgetQuery widget_queries = 2 [(validate.rules).repeated.min_items = 1];
+  uint32 last_update_in_secs = 3;
+}
+
+// RequestContent and forceFetch looks exactly the same at this point, but server might handle them differently
+// Keeping two different files for now
+message ForceFetchContent {
+  common.TimeZone time_zone = 1;
+  repeated WidgetQuery widget_queries = 2 [(validate.rules).repeated.min_items = 1];
+  uint32 last_update_in_secs = 3;
+}
+
+
+
+
+

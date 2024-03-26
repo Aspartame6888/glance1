@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/snp/service/v1/widget_config.proto";
+import "com/glance/spaces/snp/service/v1/widget_element.proto";
+import "validate/validate.proto";
+
+message WidgetData {
+  string id = 1 [(validate.rules).string.min_len = 1];
+  repeated WidgetElement widget_elements = 2;
+  bool is_live = 3; // todo deprecate it - once NBASCore is deprecated
+  reserved 4;
+  reserved "onboarding_meta";
+  WidgetConfig widget_config = 5;
+  int32 zapp_id = 6;
+  int32 zapp_widget_identifier = 7;
+  int64 version = 8;
+}

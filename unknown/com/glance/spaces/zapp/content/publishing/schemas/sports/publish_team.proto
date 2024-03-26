@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.sports";
+
+package com.glance.spaces.zapp.content.publishing.schemas.sports;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/logo.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_team_record.proto";
+
+message PublishTeam {
+  string team_id = 1;
+  string name = 2;
+  string abbreviation = 3;
+  common.Logo logo = 4;
+  int32 total_score = 5;
+  bool winner = 6;
+  PublishTeamRecord record = 7;
+}

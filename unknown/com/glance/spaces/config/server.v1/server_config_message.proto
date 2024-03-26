@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.config.server.v1";
+
+package com.glance.spaces.config.server.v1;
+
+message ServerConfigMessage {
+  Config config = 1;
+}
+
+message Config {
+  Onboarding onboarding = 1;
+}
+
+message Onboarding {
+  string url = 1;
+  repeated AgeGroup ageGroups = 2;
+  string threshold = 3;
+}
+
+message AgeGroup {
+  string key = 1;
+  bool is_minor = 3;
+  string displayText = 4;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.snp.service.v1";
+
+package com.glance.spaces.snp.service.v1;
+
+import "com/glance/spaces/config/server.v1/server_config_message.proto";
+import "com/glance/spaces/config/client.v1/client_config_message.proto";
+import "com/glance/spaces/config/server.v2/server_config_message.proto";
+import "com/glance/spaces/config/client.v2/client_config_message.proto";
+
+service ConfigService {
+  rpc HandleConfigMessage (config.client.v1.ClientConfigMessage) returns (config.server.v1.ServerConfigMessage) {}
+  rpc HandleConfigMessageV2(config.client.v2.ClientConfigMessage) returns (config.server.v2.ServerConfigMessage) {}
+}

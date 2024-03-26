@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.snp.service.v1";
+
+package com.glance.spaces.analytics.snp.service.v1;
+
+import "com/glance/spaces/analytics/zapp/client/v1/zapp_analytics_message.proto";
+import "com/glance/spaces/analytics/snp/ack.proto";
+
+
+service ZappAnalyticsService {
+  rpc HandleZappAnalyticsMessage (zapp.client.v1.ZappAnalyticsMessage) returns (snp.Ack) {}
+}

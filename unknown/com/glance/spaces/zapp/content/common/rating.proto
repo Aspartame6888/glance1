@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+message Rating {
+  int32 maximum = 1; // Denominator
+  int32 rated = 2; // Numerator
+  string rated_image_url = 3; // Filled image Urls for the individual rating, say Star or Zings or Thumbs
+  string unrated_image_url = 4; // Un-filled image Urls for the individual rating, say Star or Zings or Thumbs
+}

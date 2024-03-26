@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="data_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <ImageView android:tag="gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+    <include android:id="@id/tag" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_margin="@dimen/control_extra_space" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" layout="@layout/tag_icon" />
+    <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_mini_space" android:maxLines="1" android:layout_above="@id/priceContainer" android:layout_alignStart="@id/priceContainer" style="@style/TitleXSmall" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/priceContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_extra_space" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_marginHorizontal="@dimen/control_extra_space">
+        <TextView android:textColor="@color/white" android:id="@id/discountPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/control_micro_space" style="@style/BodySmall" />
+        <TextView android:textColor="@color/white_60" android:id="@id/originalPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/control_micro_space" style="@style/BodyXSmall" />
+        <TextView android:textColor="@color/atlantis" android:id="@id/discountPercentage" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/BodySmall" />
+    </LinearLayout>
+</RelativeLayout>

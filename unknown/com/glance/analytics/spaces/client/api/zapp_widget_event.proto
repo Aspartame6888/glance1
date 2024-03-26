@@ -1,0 +1,15 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/api/zapp_ext.proto";
+import "com/glance/analytics/spaces/client/api/element_location.proto";
+import "com/glance/analytics/spaces/client/api/interaction.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+message ZappWidgetEvent {
+  ElementLocation element_location = 1;
+  Interaction interaction = 2;
+  ZappExt zapp_ext = 3;
+}

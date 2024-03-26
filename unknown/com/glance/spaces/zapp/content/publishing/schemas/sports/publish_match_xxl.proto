@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.sports";
+
+package com.glance.spaces.zapp.content.publishing.schemas.sports;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_match_meta.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_score_column.proto";
+
+message PublishMatchXxl {
+  PublishMatchMeta match_meta = 1;
+  InningDivision inning_division = 2;
+  repeated PublishScoreColumn score_columns = 3;
+  common.Image background = 4;
+}
+
+enum InningDivision {
+  INNING_DIVISION_UNSPECIFIED = 0;
+  INNING_DIVISION_TOP = 1;
+  INNING_DIVISION_BOTTOM = 2;
+}

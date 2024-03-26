@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.common";
+
+package com.glance.spaces.zapp.content.publishing.schemas.common;
+
+message Tag {
+  string value = 1;
+  string image_left = 2;
+  LinearGradient linear_gradient = 3;
+}
+
+message LinearGradient {
+  string start_color = 1;
+  string end_color = 2;
+}

@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common";
+
+package com.glance.spaces.common;
+
+enum WidgetType {// will add L0 Widget Type here.
+  WIDGET_TYPE_UNSPECIFIED = 0;
+  TAGGED_ARTICLE_LH = 1;
+  ENTERTAINMENT_VIDEO_LH = 2;
+  PRODUCT_DROPS_LV = 3;
+  RECENTLY_PLAYED_GAMES_LH = 4;
+  LIVE_MATCH_LN = 5;
+  LEADERBOARD_LH = 6;
+  GAMES_LIST_MD = 7;
+  GAME_XL = 8;
+  CATEGORIZED_LV_XXL = 9;
+  HEADLINES_XXL = 10;
+  LEAGUE_MATCH_XXL = 11;
+  TEAM_MATCH_XXL = 12;
+  ROUNDUP_MXL = 13;
+  FEATURED_GAME_XL = 14;
+  OFF_SEASON_MXL = 15;
+  TAGGED_ARTICLE_LN = 16 [deprecated = true]; //Added new improved UI template BREAKING_NEWS_LN_V2
+  HEADLINES_LN = 17 [deprecated = true]; //Added new improved UI template HEADLINES_LN_V2
+  BG_INFO_XS = 18;
+  MATCH_XS = 19 [deprecated = true]; //Added new improved UI template MATCH_XS_V2
+  MATCH_LN = 20;
+  HEADLINES_MD = 21;
+  RECENTLY_PLAYED_GAMES_LN = 22;
+  ROUNDUP_LN = 23;
+  ROUNDUP_MD = 24;
+  PARTNER_GAME_XXL = 25;
+  LIVE_STREAM_XXL = 26;
+  NEW_ARRIVALS_XL = 27;
+  EDITORS_CHOICE_XXL = 28;
+  TOP_THREE_MXL = 29;
+  COMMUNITY_XXL = 30;
+  GAMES_LN = 31;
+  MATCH_XS_V2 = 32;
+  HEADLINES_LN_V2 = 33;
+  ONE_WEATHER_LN_V1 = 34;
+  BREAKING_NEWS_MD = 35;
+  BREAKING_NEWS_LN_V2 = 36; //update version for TAGGED_ARTICLE_LN
+  GAMES_MD = 37;
+  DAILY_DEAL_XL = 38;
+  HEADLINES_XXL_V2 = 39;
+  GAME_XXL = 40;
+  HOT_TOPIC_XL = 41;
+  TRENDS_XXL = 42;
+  ENTERTAINMENT_LN = 43;
+  ENTERTAINMENT_MD = 44;
+  TRENDING_TODAY_XXL = 45;
+  DAILY_DEAL_LN = 46;
+  TRENDING_TODAY_LN = 47;
+  BUDGET_BUY_LN = 48;
+  DAILY_DEAL_MD = 49;
+  TRENDING_TODAY_MD = 50;
+  BUDGET_BUY_MD = 51;
+  STANDINGS_XXL = 52;
+  PREFERENCE_LH = 53;
+  INFINITY_SCROLL_LV = 54;
+  HOROSCOPE_LH = 55;
+}

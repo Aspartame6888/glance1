@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+message RecentlyPlayedGamesLnElement {
+  common.Image bg_image = 1;
+  common.Image game_banner = 2;
+  common.Title title = 3;
+  common.Tag tag = 4;
+  string game_name = 5;
+  common.Title subtitle = 6;
+  common.Image gaming_logo = 7;
+}

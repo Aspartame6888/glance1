@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.api";
+
+package com.glance.analytics.spaces.client.api;
+
+enum SurfaceSessionType {
+  UNKNOWN = 0;
+  LOCKSCREEN_SPACES = 1;
+  LOCKSCREEN_HIGHLIGHTS = 2;
+}

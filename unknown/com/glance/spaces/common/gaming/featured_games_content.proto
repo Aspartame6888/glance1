@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.glance.spaces.common.gaming";
+
+package com.glance.spaces.common.gaming;
+
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/common/icon.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message FeaturedGamesContent {
+
+  zapp.content.common.Title title = 1;
+  string subtitle = 2;
+  zapp.content.common.Poster thumbnail = 3;
+  zapp.content.common.Poster banner_asset_url = 4;
+  zapp.content.common.ElementCta cta = 5;
+  int64 video_view_count = 6;
+  int64 video_duration = 7;
+  int64 live_from = 8;
+  int64 live_till = 9;
+  ContentType content_type = 10;
+  string video_duration_text = 11;
+  zapp.content.common.Icon view_count_logo = 12;
+  string view_count_text = 13;
+  string gif_url = 14;
+  string content_count_text = 15;
+}
+
+enum ContentType {
+  CONTENT_TYPE_UNSPECIFIED = 0;
+  CONTENT_TYPE_LIVE = 1;
+  CONTENT_TYPE_TRAILER = 2;
+  CONTENT_TYPE_MOMENT = 3;
+  CONTENT_TYPE_COMMUNITY = 4;
+}

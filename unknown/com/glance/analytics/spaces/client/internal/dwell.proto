@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/duration.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.internal";
+
+package com.glance.analytics.spaces.client.internal;
+
+enum DwellClosure {
+  GRACEFUL = 0;
+  TIMED_OUT = 1;
+  CORRUPTED = 2;
+}
+
+message Dwell {
+  google.protobuf.Duration duration  = 1;
+  DwellClosure closure = 2;
+}

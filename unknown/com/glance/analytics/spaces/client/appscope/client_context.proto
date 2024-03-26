@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "com/glance/analytics/spaces/client/appscope/locale.proto";
+import "com/glance/analytics/spaces/client/appscope/software_version.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.appscope";
+
+package com.glance.analytics.spaces.client.appscope;
+
+message ClientContext {
+  string api_key = 1; //need discussion on this
+  string user_id = 2; //need discussion on this
+  string sdk_version = 3 [deprecated = true];
+  Locale locale = 4;
+  string sdk_version_extras = 5 [deprecated = true];
+  ClientAppVersioning app_versioning = 6;
+}

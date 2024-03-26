@@ -1,0 +1,28 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+option java_package = "com.glance.spaces.analytics.sdk.prefsmodel";
+option java_multiple_files = true;
+
+
+message AnalyticsSequencer {
+/* Repetitive code
+
+Fields from com.glance.analytics.spaces.client.internal.Sequence are
+intentionally duplicated here instead of referencing Sequence directly.
+
+This copy-paste is being done out of paranoia that the Sequence class
+evolves outside of this source tree. We need to be in control of the
+state store migration as this code evolves. Having it here makes it
+easier to achieve this.
+*/
+  int32 generation = 1;
+  uint64 sequence_number = 2;
+  google.protobuf.Timestamp init_time = 3;
+  AnalyticsSequencerInitReason init_reason = 4;
+}
+
+enum AnalyticsSequencerInitReason {
+  CLEAN = 0;
+  ON_CORRUPT = 1;
+}

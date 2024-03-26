@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.onboarding";
+
+package com.glance.spaces.zapp.content.onboarding;
+
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/deeplink.proto";
+
+message Banner {
+  common.Image background = 1;
+  common.Title title = 2;
+  common.Deeplink cta = 3;
+  common.Image poster = 4;
+}

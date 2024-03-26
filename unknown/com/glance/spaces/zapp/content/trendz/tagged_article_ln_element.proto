@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.trendz";
+
+package com.glance.spaces.zapp.content.trendz;
+
+import "com/glance/spaces/zapp/content/common/logo.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "validate/validate.proto";
+
+message TaggedArticleLnElement {
+  common.Title title = 1;
+  common.Timestamp timestamp = 2;
+  common.Logo logo = 3;
+  common.Poster poster = 4;
+  common.Tag tag = 5;
+  repeated common.Tag tags_with_ttl = 6 [(validate.rules).repeated.max_items = 5];
+  common.Image bg_image = 7;
+}
+

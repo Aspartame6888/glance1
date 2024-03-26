@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.config.server.v2";
+
+package com.glance.spaces.config.server.v2;
+
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+
+message ServerConfigMessage {
+  Config config = 1;
+  common.CommonServerParams common_params = 3;
+  snp.SnpParams snp_params = 2;
+}
+
+message Config {
+  Onboarding onboarding = 1;
+  ContentPane content_pane = 2;
+  App app = 3;
+  FeatureFlags feature_flags = 4;
+  int64 refresh_interval_in_secs = 5;
+}
+
+message FeatureFlags {
+  bool show_age_gating = 1;
+}
+
+message Onboarding {
+  string url = 1;
+  repeated AgeGroup ageGroups = 2;
+  string threshold = 3;
+}
+
+message AgeGroup {
+  string key = 1;
+  bool is_minor = 3;
+  string displayText = 4;
+}
+
+message ContentPane {
+  Feedback feedback = 1;
+  MrNotificationData mr_notification_data = 2;
+  LockScreenConfigDetails lock_screen_details = 3;
+  RefreshInterval refresh_interval = 4;
+}
+
+message RefreshInterval {
+  map<string, int64> l0_refresh_interval_in_secs = 1;
+  map<string, int64> remove_refresh_interval_in_secs = 2;
+  map<string, int64> lplus_refresh_interval_in_secs = 3;
+  map<string, int64> lplus_refresh_enable_interval_in_secs = 4;
+}
+
+message Feedback {
+  bool enabled = 1;
+  string url = 2;
+}
+
+message MrNotificationData {
+  repeated NotificationItem data = 1;
+}
+
+message NotificationItem {
+  bool show_sticky = 1;
+  string title = 2;
+  int32 time = 3;
+}
+
+message LockScreenConfigDetails {
+  int32 screen_threshold_in_millis = 1;
+  int32 screen_threshold_count = 2;
+  bool rtl_swipe = 3;
+  bool kill_switch = 4;
+  bool reactivation_widget = 5;
+  bool activation_on_rtl_swipe = 6;
+  bool reactivation_on_rtl_swipe = 7;
+  int32 system_screen_on_threshold = 8;
+}
+
+message App {
+  string sentry_dsn = 1;
+  Updater updater = 2;
+}
+
+message Updater {
+  string cdn_url = 1;
+  string version = 2;
+}

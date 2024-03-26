@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.layout";
+
+package com.glance.spaces.lsspace.layout;
+
+import "com/glance/spaces/lsspace/layout/zapp_meta.proto";
+import "validate/validate.proto";
+
+message Widget {
+  reserved 4;
+  reserved  "onboarding_meta";
+
+  string id = 1;                        //  Not used for L0
+  double weight = 2;                    //  Not used for L0
+  ZappMeta zapp_meta = 3 [(validate.rules).message.required = true];
+  bool hidden = 5;                      //  Not used for L0
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.common";
+
+package com.glance.spaces.common;
+
+enum Region {
+  REGION_UNSPECIFIED = 0;
+  IN = 1;
+  US = 2;
+  DE = 3;
+}

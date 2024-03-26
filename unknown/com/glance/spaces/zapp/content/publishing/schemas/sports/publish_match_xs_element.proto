@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.sports";
+
+package com.glance.spaces.zapp.content.publishing.schemas.sports;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/gif.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/sports/publish_match_meta.proto";
+
+message PublishMatchXsElement {
+  PublishMatchMeta match_meta = 1;
+  string matchup_txt = 2;
+  common.Image bg_image = 3;
+  common.Gif winner_confetti_gif = 4;
+  common.Image vs_logo = 5;
+}

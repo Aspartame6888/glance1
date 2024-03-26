@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/zapp/content/common/deeplink.proto";
+import "com/glance/spaces/zapp/content/games/recently_played_games_md_element.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+
+message RecentlyPlayedGamesMdConfig {
+  common.Deeplink view_more = 1;
+  games.RecentlyPlayedGamesMdElement.TextInfo text_info = 2;
+  common.Tag tag = 3;
+}

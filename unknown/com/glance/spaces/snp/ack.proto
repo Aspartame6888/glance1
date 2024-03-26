@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.snp";
+
+package com.glance.spaces.snp;
+
+import "google/protobuf/any.proto";
+import "validate/validate.proto";
+
+message Ack {
+  string message_id = 1;
+  AckStatus status = 2 [(validate.rules).enum.defined_only = true];
+  string description = 3;
+  google.protobuf.Any payload = 4;
+}
+
+enum AckStatus {
+  ACK_UNSPECIFIED = 0;
+  OK = 1;
+  SERVER_ERROR = 2;
+  CLIENT_ERROR = 3;
+  DOWNSTREAM_ERROR = 4;
+}
+

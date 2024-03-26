@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/background" android:tag="data_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bgImage" android:tag="frosted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/control_medium_space" android:baselineAligned="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/logo" android:tag="showinAOD" android:background="@drawable/circle" android:padding="@dimen/control_micro_space" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_marginBottom="@dimen/control_space" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+            <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_mini_space" android:maxLines="2" style="@style/BodySmall" />
+            <ImageView android:ellipsize="end" android:id="@id/title" android:tag="localImageAOD" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_medium_space" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tagView" android:tag="tag" android:background="@drawable/gaming_tagview_bg" android:padding="@dimen/control_mini_extra_space" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/tagImg" android:tag="showinAOD" android:layout_width="@dimen/control_extra_space" android:layout_height="@dimen/control_space" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_marginHorizontal="@dimen/control_mini_space" />
+                <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/tagText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/control_mini_space" style="@style/TagMedium" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="bottom" android:id="@id/poster" android:tag="showinAOD" android:padding="@dimen/control_mini_extra_space" android:paddingTop="@dimen/control_extra_space" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_weight="1.0" android:clipToOutline="true" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+message UserControl {
+  repeated NotInterestedMessage not_interested_message = 1
+      [ deprecated = true ];
+  HideNowMessage hide_now_message = 2 [ deprecated = true ];
+  repeated UserControlMessage user_control_messages = 3;
+}
+
+message HideNowMessage { string hide_now = 2; }
+
+message NotInterestedMessage {
+  message ThisContent { string this_content = 1; }
+
+  oneof typed_signal { ThisContent this_content_not_interested_message = 1; }
+}
+
+enum TagEnum {
+  TAG_UNSPECIFIED = 0;
+  ARTICLE = 1;
+  CATEGORY = 2;
+  PUBLISHER = 3;
+}
+
+enum ActionEnum {
+  ACTION_UNSPECIFIED = 0;
+  HIDE = 1;
+  NOT_INTERESTED = 2;
+  FEEDBACK = 3;
+  SETTINGS = 4;
+  DISCOVERY = 5;
+}
+
+message Entity {
+  TagEnum entity_type = 1;
+  string entity_value = 2;
+}
+
+message UserControlMessage {
+  string id = 1;
+  string display_text = 2;
+  ActionEnum action = 3;
+  Entity entity = 4;
+}

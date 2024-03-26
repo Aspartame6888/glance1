@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/common/logo.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+
+message OffSeason {
+  SeasonPhase phase = 1;
+  common.Logo logo = 2;
+  string year = 3;
+  common.Poster poster = 4;
+  string text = 5;
+}
+
+enum SeasonPhase {
+  SEASON_PHASE_UNSPECIFIED = 0;
+  SEASON_PHASE_PRE = 1;
+  SEASON_PHASE_POST = 2;
+}

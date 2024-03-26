@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/pageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/fixtureLl" android:background="@color/pageBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/_48sdp" android:elevation="@dimen/_10sdp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/fBackIv" android:padding="5.0dip" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginTop="@dimen/pageMarginStartEnd" android:src="@drawable/ic_back_team" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_10sdp" />
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/white" android:id="@id/fLeagueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_12sdp" android:layout_toEndOf="@id/fBackIv" />
+    </RelativeLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/tsSRL" android:layout_width="0.0dip" android:layout_height="0.0dip" android:overScrollMode="never" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fixtureLl">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/tsScoreRv" android:visibility="visible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="parent" />
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include android:id="@id/tsProgressBar" layout="@layout/sports_progress_bar" />
+    <androidx.compose.ui.platform.ComposeView android:id="@id/error_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

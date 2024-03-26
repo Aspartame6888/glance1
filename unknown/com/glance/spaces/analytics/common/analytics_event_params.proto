@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.analytics.common";
+
+package com.glance.spaces.analytics.common;
+
+import "com/glance/spaces/analytics/common/region.proto";
+
+
+message AnalyticsEventParams {
+  string partner_id = 1;
+  string user_id = 2;
+  string sdk_version = 3;
+  uint64 timestamp = 4;
+  uint64 request_timestamp = 5;
+  uint64 client_timestamp = 6;
+  common.Region region = 7;
+  string city_id = 8;
+  string state_id = 9;
+  string device_id = 10;
+  string gpid = 11;
+  string locale = 12;
+}

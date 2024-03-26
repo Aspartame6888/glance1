@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports";
+
+package com.glance.spaces.zapp.content.sports;
+
+import "com/glance/spaces/zapp/content/sports/nba_score.proto";
+
+message NbaMatchStateSnapshot {
+  NbaScore score = 1;
+  MatchState match_state = 2;
+}
+
+enum MatchState {
+  MATCH_STATE_UNSPECIFIED = 0;
+  STARTED = 1;
+  ENDED = 2;
+  CANCELLED = 3;
+  SCHEDULED = 4;
+}

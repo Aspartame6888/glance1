@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginVertical="@dimen/dp_12"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/today_card_header_view" app:layout_constraintTop_toTopOf="parent" layout="@layout/today_card_header_view" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/layout_precip_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_4" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/today_card_header_view" style="@style/TodayCardV2">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvPrecip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <View android:id="@id/nudge_separator" android:background="@color/secondary_border" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/dp_12" android:layout_marginStart="@dimen/dp_12" android:layout_marginEnd="@dimen/dp_12" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rvPrecip" />
+        <com.zapp.oneweatherzapp.presentation.views.MicroNudgeRecyclerView android:id="@id/rv_micro_highlight" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/nudge_separator" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="days">
+        <item quantity="other">Vor %s Tagen</item>
+        <item quantity="one">Vor %s Tag</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">%d Sekunden vorspulen</item>
+        <item quantity="one">%d Sekunde vorspulen</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">%d Sekunden zurückspulen</item>
+        <item quantity="one">%d Sekunde zurückspulen</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">Vor %s Stunden</item>
+        <item quantity="one">Vor %s Stunde</item>
+    </plurals>
+    <plurals name="min_publishers_required">
+        <item quantity="other">Mindestens %s Verlage erforderlich</item>
+        <item quantity="one">Mindestens %s Verlag erforderlich</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">Vor %s Minuten</item>
+        <item quantity="one">Vor %s Minute</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d neue Benachrichtigungen</item>
+        <item quantity="one">%d neue Benachrichtigung</item>
+    </plurals>
+</resources>

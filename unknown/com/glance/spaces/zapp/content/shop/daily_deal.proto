@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.shop";
+
+package com.glance.spaces.zapp.content.shop;
+
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/shop/product_price.proto";
+
+/**
+ * Used for Shop Daily Deal L+ Xl & Ls Ln & Md
+ */
+message DailyDeal {
+  common.Tag tag = 1;
+  common.Image image = 2;
+  string rating = 3;
+  string name = 4;
+  ProductPrice product_price = 5;
+  common.Image bg_image = 6; // Only used in Ls widgets
+}

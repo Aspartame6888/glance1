@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.games";
+
+package com.glance.spaces.zapp.content.games;
+
+import "com/glance/spaces/common/gaming/game_info.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message EditorsChoiceXxlElement {
+  spaces.common.gaming.GameInfo game_info = 1;
+  string editor_name = 2;
+  common.Image editor_image = 3;
+  string editor_message = 4;
+}
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.games";
+
+package com.glance.spaces.zapp.content.publishing.schemas.games;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_partner_game_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/deeplink.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+
+message PublishCommunityXxlElement {
+  string game_name = 1;
+  common.Image game_icon = 2;
+  repeated PublishCommunityPost posts = 3;
+  common.Deeplink view_more = 4;
+}

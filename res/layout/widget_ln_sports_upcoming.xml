@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bgImage" android:tag="frosted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/league_logo" android:tag="showinAOD" android:layout_width="@dimen/control_double_space" android:layout_height="@dimen/control_double_space" android:layout_marginTop="@dimen/control_extra_space" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/control_extra_space" android:layout_alignParentStart="true" />
+    <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white" android:id="@id/venue_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_extra_headlines_space" android:maxLines="1" android:layout_centerHorizontal="true" style="@style/TitleXSmall" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/left_team_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/control_triple_extra_space">
+        <ImageView android:id="@id/left_team_logo" android:layout_width="@dimen/control_penta_space" android:layout_height="@dimen/control_penta_space" android:layout_marginEnd="@dimen/control_mini_extra_space" />
+        <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@id/left_team_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/TitleXSmall" />
+    </LinearLayout>
+    <TextView android:textColor="@color/white" android:id="@id/schedule_time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerInParent="true" style="@style/TitleLarge" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/right_teams_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/control_triple_extra_space" android:layout_alignParentEnd="true">
+        <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@id/right_team_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="@dimen/control_mini_extra_space" style="@style/TitleXSmall" />
+        <ImageView android:id="@id/right_team_logo" android:layout_width="@dimen/control_penta_space" android:layout_height="@dimen/control_penta_space" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:id="@id/schedule_date_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_space" android:maxLines="1" android:layout_below="@id/schedule_time_text" android:layout_centerInParent="true" style="@style/TitleXSmall" />
+</RelativeLayout>

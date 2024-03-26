@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.common";
+
+package com.glance.spaces.zapp.content.common;
+
+import "com/glance/spaces/zapp/content/common/logo.proto";
+import "com/glance/spaces/zapp/content/common/poster.proto";
+import "com/glance/spaces/zapp/content/common/tag.proto";
+import "com/glance/spaces/zapp/content/common/timestamp.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+
+message InfinityScrollLvElement {
+  common.Title title = 1;
+  common.Logo logo = 2;
+  common.Poster poster = 3;
+  common.Timestamp timestamp = 4;
+}

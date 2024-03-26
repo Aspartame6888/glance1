@@ -1,0 +1,23 @@
+syntax = "proto3";
+import "com/glance/analytics/spaces/client/internal/wire_event.proto";
+
+option java_multiple_files = true;
+option java_package = "com.glance.analytics.spaces.client.internal";
+
+package com.glance.analytics.spaces.client.internal;
+
+/* The RPC service endpoint*/
+service AnalyticsCollector {
+
+    /** Send one or more analytics event to the server
+      *
+      * This operation is idempotent within a bounded time period. If the server receives the
+      * same event more than once, it will deduplicate the event before exposing to other data
+      * pipelines on a best effort basis. The deduplication happens basis the batch_nonce value
+      * present in the request.
+      *
+      * The server will respond with a BatchUploadResponse which will contain the status of parsing
+      * this batch of events. There are no durability guarantees for the events sent to the server.
+      */
+    rpc sendBatch (AnalyticsEventBatch) returns (BatchUploadResponse);
+}

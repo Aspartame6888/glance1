@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.common.gaming";
+
+package com.glance.spaces.zapp.content.publishing.schemas.common.gaming;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/poster.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+
+message GameInfo {
+  string game_id = 1;
+  string game_name = 2;
+  common.Poster game_banner = 3;
+  common.ElementCta game_cta_url = 4;
+  double rating = 5;
+  string game_category = 6;
+  int64 last_played_at = 7;
+  common.Image game_icon = 8;
+}

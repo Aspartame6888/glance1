@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.games";
+
+package com.glance.spaces.zapp.content.publishing.schemas.games;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/deeplink.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/games/publish_partner_game_xxl_element.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/tag.proto";
+
+message PublishLiveStreamXxlElement {
+  PublishLiveStreamInfo live_stream_info = 1;
+}

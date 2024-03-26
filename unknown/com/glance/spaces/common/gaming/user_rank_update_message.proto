@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.glance.spaces.common.gaming";
+
+package com.glance.spaces.common.gaming;
+
+import "com/glance/spaces/common/zapp_id.proto";
+import "com/glance/spaces/common/zapp_widget_id.proto";
+
+message UserRankUpdateMessage {
+  string user_id = 1;
+  common.ZappWidgetId zapp_widget_id = 2;
+  int64 rank = 3;
+  string score = 4;
+  string avatar = 5;
+  string user_name = 6;
+  string content_id = 7;
+  string l0_message = 8;
+  string city = 9;
+  int64 coins = 10;
+  string ordinal_rank = 11;
+  common.ZappId zapp_id = 12;
+}

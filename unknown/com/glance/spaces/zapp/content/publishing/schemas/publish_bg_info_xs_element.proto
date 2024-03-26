@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas";
+
+package com.glance.spaces.zapp.content.publishing.schemas;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/icon.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/title.proto";
+
+message PublishBgInfoXsElement {
+  common.Title title = 1;
+  common.Icon icon = 2;
+  string main_text = 3;
+  string info = 4;
+  common.Icon bg_image = 5;
+  string description = 6;
+  CurrentWeather current_weather = 7;
+  repeated HourlyWeather hourly_weather = 8;
+  repeated DailyWeather daily_weather = 9;
+  repeated Alerts alerts = 10;
+}
+message CurrentWeather {
+  string temperature = 1;
+  string temperature_unit = 2;
+  string weather_condition = 3;
+  common.Icon weather_condition_media = 4;
+  common.Icon weather_condition_logo_url = 5;
+  double precipitation = 6;
+  double aqi_value = 7;
+  string aqi_text = 8;
+}
+
+message HourlyWeather {
+  int64 timestamp = 1;
+  string temperature = 2;
+  string temperature_unit = 3;
+  string weather_condition = 4;
+  common.Icon weather_condition_media = 5;
+  common.Icon weather_condition_logo_url = 6;
+  double precipitation_probability = 7;
+}
+
+message DailyWeather {
+  int64 timestamp = 1;
+  string min_temperature = 2;
+  string max_temperature = 3;
+  string temperature_unit = 4;
+  string weather_condition = 5;
+  common.Icon weather_condition_media = 6;
+  common.Icon weather_condition_logo_url = 7;
+  double precipitation_probability = 8;
+}
+
+message Alerts {
+  int64 start_time = 1;
+  int64 end_time = 2;
+  string source = 3;
+  string title = 4;
+  string description = 5;
+  string severity = 6;
+}

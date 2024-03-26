@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.glance.spaces.zapp.content.common;
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "validate/validate.proto";
+import "com/glance/spaces/zapp/content/common/media_content.proto";
+
+
+enum TemperatureUnit {
+  TEMP_UNIT_TYPE_UNKNOWN = 0;
+  FAHRENHEIT = 1;
+  CELSIUS = 2;
+}
+
+enum AQIRange {
+  UNKNOWN = 0;
+  GOOD = 1;
+  SATISFACTORY = 2;
+  UNHEALTHY = 3;
+  VERYUNHEALTHY = 4;
+  HAZARDOUS = 5;
+}
+
+enum Source {
+  SOURCE_UNKNOWN = 0;
+  NWS = 1;
+}
+
+enum Urgency {
+  URGENCY_UNKNOWN = 0;
+  IMMEDIATE = 1;
+  EXPECTED = 2;
+  FUTURE = 3;
+  PAST = 4;
+}
+
+enum Certainty {
+  CERTAINTY_UNKNOWN = 0;
+  OBSERVED = 1;
+  LIKELY = 2;
+  POSSIBLE = 3;
+  UNLIKELY = 4;
+}
+
+enum Severity {
+  SEVERITY_UNKNOWN = 0;
+  EXTREME = 1;
+  SEVERE = 2;
+  MODERATE = 3;
+  MINOR = 4;
+}
+enum PrecipitationUnit {
+  PRECIP_UNIT_UNKNOWN = 0;
+  INCH_PER_HOUR = 1;
+  MM_PER_HOUR = 2;
+}
+
+enum WeatherForecastType {
+  FORECAST_TYPE_UNKNOWN = 0;
+  HOURLY = 1;
+  DAILY = 2;
+}
+
+message Temperature {
+  string value = 1;
+  TemperatureUnit temperature_unit = 2 [(validate.rules).enum = {not_in: [0]}];
+}
+
+message Precipitation {
+  int32 percentage = 1;
+  double value = 2;
+  PrecipitationUnit precipitation_unit = 3 [(validate.rules).enum = {not_in: [0]}];
+}
+
+message AQI {
+  double value = 1;
+  AQIRange aqi_range = 2 [(validate.rules).enum = {not_in: [0]}];;
+}
+
+message WeatherCondition {
+  string weather_condition = 1;
+  content.common.Image condition_media = 2 [ deprecated = true ];
+  content.common.Image weather_condition_logo_url = 3 [ deprecated = true ];
+  content.common.MediaContent media_content = 4;
+  content.common.MediaContent logo = 5;
+}
+
+message BaseWeatherContent {
+  Temperature temperature = 1;
+  WeatherCondition weather_condition = 2 ;
+  Precipitation precipitation = 3;
+  AQI aqi = 4;
+}

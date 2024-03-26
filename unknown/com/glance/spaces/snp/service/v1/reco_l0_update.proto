@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.glance.spaces.ds";
+
+package com.glance.spaces.ds;
+
+import "com/glance/spaces/snp/service/v1/l0_server_message.proto";
+
+message RecoL0Update {
+  string job_id = 1;
+  string user_id = 2;
+  uint64 process_start_time = 3;
+  uint64 process_end_time = 4;
+  string experiment_variant_id = 5;
+  content.server.v1.L0Message l0_message = 6;
+}

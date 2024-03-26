@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/background" android:tag="data_item_xs" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bgImage" android:tag="frosted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/winner_confetti_image" android:tag="showinAOD" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <TextView android:textColor="@color/white" android:id="@id/league_abbr" android:background="@drawable/rounded_grey_bg_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_medium_space" android:includeFontPadding="false" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/control_extra_space" android:layout_alignParentStart="true" style="@style/BodyXSmall" />
+    <FrameLayout android:orientation="horizontal" android:id="@id/teams_logo_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_mini_space" android:layout_below="@id/league_abbr" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:id="@id/left_team_logo" android:layout_width="@dimen/control_triple_space" android:layout_height="@dimen/control_triple_space" android:layout_marginRight="@dimen/control_medium_space" />
+        <ImageView android:layout_gravity="center" android:id="@id/right_team_logo" android:layout_width="@dimen/control_quad_space" android:layout_height="@dimen/control_quad_space" android:layout_marginLeft="@dimen/control_medium_space" android:elevation="1.0dip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/score_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_mini_extra_space" android:layout_below="@id/teams_logo_layout" android:layout_centerInParent="true">
+        <TextView android:textColor="@color/white_60" android:id="@id/left_team_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/control_mini_space" style="@style/TitleLarge" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/left_winning_tag_image" android:tag="showinAOD" android:background="@drawable/winner_tag" android:visibility="gone" android:layout_width="@dimen/control_extra_space" android:layout_height="@dimen/control_extra_space" android:rotation="180.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/right_winning_tag_image" android:tag="showinAOD" android:background="@drawable/winner_tag" android:visibility="gone" android:layout_width="@dimen/control_extra_space" android:layout_height="@dimen/control_extra_space" />
+        <TextView android:textColor="@color/white_60" android:id="@id/right_team_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/control_mini_space" style="@style/TitleLarge" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:id="@id/innings_info_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_micro_space" android:layout_below="@id/score_layout" android:layout_centerHorizontal="true" style="@style/TitleXSmall" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.snp.service.v1";
+
+package com.glance.spaces.snp.service.v1;
+
+import "com/glance/spaces/snp/service/v1/client_live_widget_message.proto";
+import "com/glance/spaces/snp/service/v1/server_live_widget_message.proto";
+
+service LiveService {
+    rpc HandleLiveWidgetMessage (stream zapp.content.client.v1.ClientLiveWidgetMessage) returns (stream zapp.content.server.v1.ServerLiveWidgetMessage) {}
+}

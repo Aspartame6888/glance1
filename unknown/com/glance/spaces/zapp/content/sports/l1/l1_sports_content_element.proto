@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.sports.l1";
+
+package com.glance.spaces.zapp.content.sports.l1;
+
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/common/title.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+import "com/glance/spaces/zapp/content/common/logo.proto";
+
+message L1SportsContentElement {
+  common.Title title = 1;
+  common.Image image = 2;
+  common.ElementCta element_cta = 3;
+  int64 published_time = 4;
+  common.Logo logo = 5;
+}
+

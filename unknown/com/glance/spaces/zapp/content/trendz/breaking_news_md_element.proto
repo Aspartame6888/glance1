@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.trendz";
+
+package com.glance.spaces.zapp.content.trendz;
+
+import "com/glance/spaces/zapp/content/trendz/breaking_news_element.proto";
+
+message BreakingNewsMdElement {
+  trendz.BreakingNewsElement breaking_news_element = 1;
+}

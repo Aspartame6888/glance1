@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.lsspace.layout.server.v1";
+
+package com.glance.spaces.lsspace.layout.server.v1;
+
+import "com/glance/spaces/common/common_server_params.proto";
+import "com/glance/spaces/lsspace/layout/spaces_hierarchy.proto";
+import "com/glance/spaces/snp/snp_params.proto";
+import "validate/validate.proto";
+
+message ServerLayoutMessage {
+  common.CommonServerParams common_params = 1;
+  snp.SnpParams snp_params = 2;
+  repeated ServerLayoutNotification notifications = 3 [(validate.rules).repeated.min_items = 1];
+}
+
+message ServerLayoutNotification {
+  oneof body {
+    RefreshLayout refresh_layout = 2;
+  }
+}
+
+message RefreshLayout {
+  repeated SpaceHierarchy spaces = 2 [(validate.rules).repeated.min_items = 1];
+}

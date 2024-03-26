@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.snp.service.v1";
+
+package com.glance.spaces.snp.service.v1;
+
+import "com/glance/spaces/lsspace/location/rec/client.v1/client_location_rec_message.proto";
+import "com/glance/spaces/lsspace/location/rec/server.v1/server_location_rec_message.proto";
+import "com/glance/spaces/lsspace/location/search/client.v1/client_location_search_message.proto";
+import "com/glance/spaces/lsspace/location/search/server.v1/server_location_search_message.proto";
+
+service LocationService {
+  rpc HandleLocationRecommendationMessage (lsspace.location.rec.client.v1.ClientLocationRecMessage) returns (lsspace.location.rec.server.v1.ServerLocationRecMessage) {}
+  rpc HandleLocationSearchMessage (lsspace.location.search.client.v1.ClientLocationSearchMessage) returns (lsspace.location.search.server.v1.ServerLocationSearchMessage) {}
+}

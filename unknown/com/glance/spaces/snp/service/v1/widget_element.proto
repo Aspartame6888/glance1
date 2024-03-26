@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content";
+
+package com.glance.spaces.zapp.content;
+
+import "com/glance/spaces/common/l0_representation.proto";
+import "com/glance/spaces/common/space_type.proto";
+import "com/glance/spaces/snp/service/v1/user_controls.proto";
+import "com/glance/spaces/zapp/content/common/element_cta.proto";
+import "com/glance/spaces/zapp/content/widget_content.proto";
+import "com/glance/spaces/snp/service/v1/client_live_widget_message.proto";
+import "com/glance/spaces/common/live_meta.proto";
+import "validate/validate.proto";
+import "com/glance/spaces/zapp/content/common/image.proto";
+
+message WidgetElement {
+  reserved 13;
+  reserved "l0_element";
+
+  string id = 1 [ (validate.rules).string.min_len = 1 ];
+  double weight = 2;
+  common.ElementCta element_cta = 3;
+  repeated string categories = 4;
+  int64 start_time = 5;
+  int64 end_time = 6;
+  int64 published_at = 7;
+  string parent_content_id = 12;
+  repeated string sub_categories = 14;
+  string publisher_id = 15;
+  string language = 16;
+  WidgetContent widget_content = 28;
+  repeated string group_ids = 29;
+  reserved 30;
+  reserved "live_element_callback";
+  repeated com.glance.spaces.common.L0Representation l0_representations = 31
+      [ deprecated = true ]; // Repeated one of change for L0
+  repeated string content_types = 32;
+  com.glance.spaces.common.SpaceType space_id = 33;
+  bool is_live_element = 34;
+  com.glance.spaces.zapp.content.UserControl user_control = 35;
+  int32 widget_id = 36; // values from common.WidgetType enum
+  com.glance.spaces.common.LiveMeta live_meta = 37; // to be populated when is_live_element = True;
+  com.glance.spaces.zapp.content.common.Image widget_bg_image = 38;
+  string serving_id = 39; // correlation id against a prediction
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:id="@id/constraintLayoutPlayer" android:tag="nonClicked" android:background="@drawable/bg_round_outline_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/viewPlayerLogo" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:elevation="0.0dip" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="@dimen/_30sdp" app:cardElevation="0.0dip" app:cardUseCompatPadding="false" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivPlayer" android:background="@android:color/transparent" android:paddingTop="@dimen/_4sdp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@string/todo" app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

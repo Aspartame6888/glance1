@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.glance.spaces.zapp.content.publishing.schemas.games";
+
+package com.glance.spaces.zapp.content.publishing.schemas.games;
+
+import "com/glance/spaces/zapp/content/publishing/schemas/common/title.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/image.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/tag.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/deeplink.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/icon.proto";
+import "com/glance/spaces/zapp/content/publishing/schemas/common/gaming/comment.proto";
+
+message PublishPartnerUpdate {
+  common.Image banner = 1;
+  common.Tag hash_tag = 2;
+  common.Title title = 3;
+  common.Title subtitle = 4;
+  common.Deeplink deeplink = 5;
+  string current_price = 6;
+  string original_price = 7;
+}
+
+message PublishLiveStreamInfo {
+  common.Tag live_tag = 1;
+  string view_count_text = 2;
+  common.Image view_count_icon = 3;
+  common.Image thumbnail = 4;
+  common.Deeplink deeplink = 5;
+  common.Title title = 6;
+  string streamer_name = 7;
+  common.Image streamer_avatar = 8;
+  string game_name = 9;
+  common.Image game_icon = 10;
+  int64 start_time = 11;
+  int64 end_time = 12;
+}
+
+message PublishCommunityPost {
+  string user_name = 1;
+  common.Image user_avatar = 2;
+  string post_text = 3;
+  common.Image likes_icon = 4;
+  common.Image comment_icon = 5;
+  repeated common.gaming.Comment comments = 6;
+  string likes_count = 7;
+  string comments_count = 8;
+  common.Image post_image = 9;
+}
+
+message PublishPartnerGameXxlElement {
+  common.Image game_icon = 1;
+  common.Title title = 2;
+  repeated PublishPartnerUpdate updates = 3;
+  PublishLiveStreamInfo live_stream_info = 4;
+  repeated PublishCommunityPost community_posts = 5;
+  common.Deeplink community_deeplink = 6;
+  common.Deeplink view_more_deeplink = 7;
+}

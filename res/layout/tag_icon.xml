@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tag" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tagBg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/tag_background" />
+    <ImageView android:id="@id/tagLogo" android:tag="showinAOD" android:layout_width="@dimen/control_space" android:layout_height="@dimen/control_space" android:layout_margin="@dimen/control_mini_space" android:adjustViewBounds="true" android:layout_centerVertical="true" android:contentDescription="@string/tag_logo" />
+</RelativeLayout>
