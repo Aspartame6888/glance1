@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="raw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/res/raw/onboarding_start.zip!/" />
+      <root url="jar://$PROJECT_DIR$/res/raw/onboarding_completed.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

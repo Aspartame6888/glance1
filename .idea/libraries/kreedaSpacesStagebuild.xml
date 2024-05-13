@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kreedaSpacesStagebuild">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/kreedaSpacesStagebuild.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
